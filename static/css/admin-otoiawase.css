@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+body {
+    padding-top: 90px;
+  }
+  
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 3vw;
+    color: #fff;
+    background-color: #333333;
+    font-family: 'Rowdies', sans-serif;
+}
+
+/* テーブル全体のスタイル */
+table {
+    width: 100%; /* テーブルの幅をページ全体に広げます */
+    border-collapse: collapse; /* セル間の境界線を合わせます */
+    table-layout: fixed; /* 列幅を固定します */
+}
+
+/* テーブルヘッダのスタイル */
+th {
+    background-color: #4CAF50; /* 背景色 */
+    color: white; /* 文字色 */
+    padding: 8px; /* パディング */
+    text-align: left; /* 左寄せ */
+}
+
+/* テーブルセルのスタイル */
+td {
+    border: 1px solid #ddd; /* セルの境界線 */
+    padding: 8px; /* パディング */
+}
+
+/* セルの内容が長い場合の処理 */
+td {
+    overflow: hidden; /* 内容がオーバーフローしたら非表示に */
+    text-overflow: ellipsis; /* オーバーフローしたテキストを省略記号で表示 */
+    white-space: nowrap; /* 改行しない */
+}
+
+/* 奇数行の背景色 */
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* ホバー時の行の背景色 */
+tr:hover {
+    background-color: #ddd;
+}
+
+.content-preview {
+    /* 必要に応じてスタイルを追加 */
+}
+
+.full-content {
+    /* 必要に応じてスタイルを追加 */
+    display: none; /* 初期状態では非表示 */
+}
+
+.show-more {
+    color: blue;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 50px;
+    color: #333; /* 見出しの色 */
+    text-align: center; /* 中央寄せ */
+    margin: 30px auto;
+  }

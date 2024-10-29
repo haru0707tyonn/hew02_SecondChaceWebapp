@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+}
+header {
+  width: 1520px;
+  height: 150px;
+  background-color: #333;
+}
+
+header h1 {
+  padding: 20px 0 0 10px;
+  color: white;
+  font-size: 2.2rem;
+}
+
+.header-nav {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.login {
+  width: 300px;
+  display: flex;
+  padding: 25px 0 0 10px;
+}
+
+.roguin {
+  color: blue;
+  font-size: 1.3rem;
+}
+
+.roguin:hover {
+  opacity: 0.5;
+}
+
+.sura {
+  color: white;
+  font-size: 1.3rem;
+  padding: 0 10px;
+}
+
+.touroku {
+  color: orange;
+  font-size: 1.3rem;
+}
+
+.touroku:hover {
+  opacity: 0.5;
+}
+
+.search {
+  margin: 10px 0 0 0;
+  border-radius: 10px;
+  width: 800px;
+  height: 45px;
+}
+
+.icon {
+  padding-left: 80px;
+  width: 420px;
+}
+
+.icon a:hover {
+  opacity: 0.5;
+}
+
+.icon img {
+  margin: 0 5px;
+}
+
+main {
+  /* background-color: rgb(143, 176, 240); */
+  margin: 30px auto 0 auto;
+  width: 1450px;
+  height: 1800px;
+}
+
+main .mainmain {
+  display: flex;
+  margin-left: 20px;
+}
+
+main .mainmain .left {
+  margin-top: 20px;
+  display: flex;
+}
+
+main .mainmain .left p {
+  text-align: center;
+  line-height: 50px;
+}
+
+main .mainmain .left .iine {
+  font-size: 13px;
+  padding: 10px;
+  width: 72px;
+  height: 72px;
+  background-color: darkgray;
+  margin-right: 10px;
+}
+main .mainmain .left .miru {
+  font-size: 13px;
+  padding: 10px;
+  width: 72px;
+  height: 72px;
+  background-color: darkgray;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+main .kate {
+  display: block;
+}
+
+.list {
+  margin-top: 20px;
+  display: block;
+  background-color: darkgray;
+  width: 164px;
+}
+
+.list li {
+  list-style: none;
+  color: black;
+}
+
+.list a:hover {
+  opacity: 0.5;
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.products {
+  margin-top: 20px;
+  width: 1280px;
+  height: 320px;
+}
+
+.products h2 {
+  font-size: 17px;
+  padding: 10px 0 10px 50px;
+}
+
+.products .div {
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto 0 auto;
+}
+
+.products .div ul {
+  width: 1200px;
+  display: flex;
+  cursor: pointer;
+}
+.products .div ul li {
+  margin: 0 10px;
+  list-style: none;
+}
+
+.products .div ul li p {
+  font-size: 0.9rem;
+  margin: 10px 0 0 0;
+}
+
+.products1 {
+  margin-top: 20px;
+  width: 1280px;
+  height: 320px;
+}
+
+.products1 h2 {
+  font-size: 17px;
+  padding: 10px 0 10px 50px;
+}
+
+.products1 .div {
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto 0 auto;
+}
+
+.products1 .div ul {
+  margin-top: 15px;
+  width: 1200px;
+  display: flex;
+  cursor: pointer;
+}
+.products1 .div ul li {
+  margin: 0 10px;
+  list-style: none;
+}
+
+.products1 .div ul li p {
+  font-size: 0.9rem;
+  margin: 10px 0 0 0;
+}
+
+.footer {
+  width: 1200px;
+}
+
+.p {
+  margin: 30px 0 30px 370px;
+  color: #555;
+  display: flex;
+}
+
+.p p {
+  margin: 0 30px;
+}
+
+.p1 {
+  padding-top: 4.5px;
+  font-size: 1.3rem;
+}
+
+.p2 {
+  padding-top: 8px;
+  font-size: 1rem;
+}
+
+.p3 {
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  z-index: 2;
+}
+
+.p3:hover {
+  opacity: 0.5;
+}
+
+.footer-b {
+  display: block;
+  margin: 0 auto 0 auto;
+  width: 1400px;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.footer-p {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 20px 0;
+}
+
+.footer-c {
+  display: block;
+  margin: 50px auto 0 auto;
+  width: 1200px;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+/* .footer-p:hover{
+  opacity: 0.5;
+} */
+
+.copy {
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+/* .border{
+  margin-left: 285px;
+  margin-bottom: 50px;
+  width: 1650px;
+  border-top: 2px dashed; #555;
+} */
+
+.horizontal-items {
+  overflow: hidden;
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.horizontal-items::-webkit-scrollbar {
+  display: none;
+}
+
+/*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown4 {
+  width: 1280px;
+  margin-top: px;
+  z-index: 1;
+  position: absolute;
+  animation: blinking 1s ease-in-out infinite alternate;
+  text-align: center;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown4 span {
+  /*テキストの形状*/
+  color: #333;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#css-slider {
+  margin: 0 auto 0 auto;
+  width: 1400px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slide-item {
+  width: 1400px;
+  height: 200px;
+  float: left;
+  position: relative;
+}
+
+.slider-wrapper {
+  width: 300%;
+  position: relative;
+  left: 0;
+  will-change: transform;
+  animation: slider 25s infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-1400px);
+  }
+  66% {
+    transform: translateX(-2800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

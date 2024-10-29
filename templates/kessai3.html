@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title></title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/kessai3.css') }}"
+  />
+  </head>
+
+  <body>
+ 
+      <header>
+        <h1>2nd Chance</h1>
+      </header>
+
+      <main>
+        <div class="pon">
+          <div class="kuro">1</div>
+          <P class="sen"></P>
+          <div class="kuro">2</div>
+          <P class="sen"></P>
+          <div class="iro">3</div>
+        </div>
+
+        <div class="poko">
+          <p class="mozi1">お客様情報</p>
+          <p class="mozi2">ご注文内容確認</p>
+          <p class="mozi3">注文完了</p>
+      </div>
+      
+          <div class="icon">
+
+              <img src="{{ url_for('static', filename='images/kessai.jpg') }}" alt="icon">
+              <h2 class="kessai">決済が完了しました</h2>
+  
+      
+          <p class="mail">
+              ご登録のメールアドレスにEメールを送信しましたので購入詳細はそちらからお願いします。<br>
+              ご注文ありがとうございます。
+          </p>
+      
+          <a href="/top/">トップに戻る</a>
+        </div>
+
+        
+
+        
+
+        
+
+      </main>
+
+      <footer id="footer">
+
+      </footer>
+    </div>
+  </body>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/kessai-common.js') }}"></script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>登録完了</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/sobu-common.css') }}"
+    />
+
+    <!-- jQuery本体 CDN -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery実行ファイル -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='js/sobu-common.js') }}"
+    />
+  </head>
+
+  <header>
+    <h1>2nd Chance</h1>
+  </header>
+
+  <body>
+    <div class="hello">
+      <h2 class="hello">ご登録ありがとうございます</h2>
+      <p class="hello">
+        ご入力いただいたメールアドレス宛てに、<br />
+        ご確認メールを送信いたしました
+      </p>
+      <a class="hello" href="/">ログインページへ</a>
+    </div>
+  </body>
+
+  <img
+    class="hello"
+    src="{{ url_for('static', filename='images/hello.jpg') }}"
+  />
+</html>

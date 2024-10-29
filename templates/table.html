@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>テーブルメンテナンス</title>
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/table.css') }}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>2nd Chance</h1>
+    </header>
+
+    <main>
+      <h2>テーブル名表示</h2>
+
+      <div class="f1">
+        <div class="search-box">
+          <input type="text" placeholder="検索ワード" />
+          <button type="submit">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+          <p class="p"></p>
+          <a class="tuika" href="">追加</a>
+        </div>
+
+        <div class="tag">
+          <a class="master03" href="admin.html"><< 管理画面TOPへ</a>
+        </div>
+      </div>
+
+      <table>
+        <tr>
+          <th>-- ID</th>
+          <th>項目</th>
+          <th>項目</th>
+          <th>項目</th>
+          <th>項目</th>
+          <th>項目</th>
+          <th>アクション</th>
+        </tr>
+
+        {% for record in records %}
+        <tr>
+          <td class="t1">{{record[0]}}</td>
+          <td class="t2">{{record[1]}}</td>
+          <td class="t3"></td>
+          <td class="t4"></td>
+          <td class="t5"></td>
+          <td class="t6"></td>
+          <td class="t7">
+            <a class="kousin" href="">更新</a>
+            <a class="sakujo" href="/table_sakujo/?Genre_ID={{record[0]}}"
+              >削除</a
+            >
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </main>
+  </body>
+
+  <footer class="master">
+    <p class="master">1ページ目</p>
+    <a class="master02" href="#">次へ</a>
+  </footer>
+</html>

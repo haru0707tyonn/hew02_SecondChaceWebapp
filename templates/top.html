@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>トップページ</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/toptest.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="wrap">
+        <header>
+          <div class="fle">
+            <a class="test2" href="/top/"><img src="{{ url_for('static', filename='images/2nd.jpg') }}" class="nd"></a>
+            <form method="post"  class="search_container" action="/kennsaku/">
+              <input type="text" id="search_query" class="n" name="search_query"  placeholder="  キーワード検索" size="100" required>
+              <button type="submit"></button>
+              <input type="submit" value="&#xf002">
+            </form>
+            <div class="f30">
+              <div class="ma">
+                <a href="/top/" class="ho1"><img src="{{ url_for('static', filename='images/top.jpg') }}" class="nav"><br>
+                  <p class="pp">トップ</p>  
+                </a>
+              </div>
+              <div class="ma">
+                <a href="/mypage/" class="ho2"><img src="{{ url_for('static', filename='images/user.jpg')}}" class="nav"><br>
+                  <p class="pp">マイページ</p>  
+                </a>
+              </div>
+              <div class="ma">
+                <a href="/osirase/" class="ho3"><img src="{{ url_for('static', filename='images/mega.jpg')}}" class="nav"><br>
+                  <p class="pp">お知らせ</p>  
+                </a>
+              </div>
+              <div class="ma">
+                <a href="#info1" class="modal-open-1"><img src="{{ url_for('static', filename='images/camera.jpg')}}" class="nav"><br>
+                  <p class="ppp">出品/リクエスト</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      <main>
+
+        
+        <!-- <div id="css-slider">
+          <div class="slider-wrapper">
+            <div class="slide-item"><img src="{{ url_for('static', filename='images/picture02.gif')}}"/></div>
+            <div class="slide-item"><img src="{{ url_for('static', filename='images/slide1.jpg')}}"/></div>
+            <div class="slide-item"><img src="{{ url_for('static', filename='images/slide2.jpg')}}"/></div>
+          </div>
+        </div> -->
+
+        <div id="css-slider">
+        <img src="{{ url_for('static', filename='images/picture02.gif')}}" class="img"/>
+        </div>
+
+
+
+        
+
+        <section id="info1">
+          <div class="modaru">
+          <a href="/syuppin/" class="atagu"><p class="syu">出品</p></a>
+          <h2 class="or">or</h2>
+          <a href="/request_syuppin/" class="atagu"><p class="riku">リクエスト</p></a>
+          </div>
+        </section>
+
+
+        <div class="mainmain">
+          <div>
+            <div class="left">
+
+              <a class="sisi" href="/syuppintyuu/"><p class="miru">出品履歴</p></a>
+              <a class="sisi" href="/rireki/"><p class="miru">購入履歴</p></a>
+            </div>
+
+            <div>
+              <h2 class="kategori">カテゴリ一覧</h2>
+              <ul class="list">
+                <li><a href="{{ url_for('kennsaku_1', category='1') }}">ファッション</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='2') }}">家具・インテリア</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='3') }}">エレクトロニクス</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='4') }}">スポーツ・アウトドア</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='5') }}">本・音楽・ゲーム</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='6') }}">車・バイク</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='7') }}">おもちゃ・ホビー</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='8') }}">ペット用品</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='9') }}">ベビー・キッズ</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='10') }}">美容・健康</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='11') }}">ジュエリー・腕時計</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='12') }}">美容・コスメ</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='13') }}">スポーツ用品</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='14') }}">アウトドア用品</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='15') }}">音楽・楽器</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='16') }}">本・雑誌</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='17') }}">ゲーム・おもちゃ</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='18') }}">インテリア・家具</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='19') }}">自動車・バイク</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='20') }}">健康・医療</a></li>
+                <li><a href="{{ url_for('kennsaku_1', category='21') }}">その他</a></li>
+            </ul>
+            
+  
+            </div>
+          </div>
+          <div>
+         <!-------------------------------------------------------------------------------------------------------------->
+
+         <div>
+          <div class="products">
+            
+            <h2>新着商品</h2>
+            <div class="div">
+              <ul class="horizontal-items">
+                {% for record in records %}
+                <li>
+                  <a href="{{ url_for('syousai', Goods_ID=record[3]) }}">
+                    <div class="border">
+                      <img src="{{ url_for('static', filename='img/' + record[2]) }}" alt=record[0] width="220px" height="220px">
+                    </div>
+                </a>
+                  <p class="syo">商品名:{{record[0]}}</p>
+                  <p class="ne">値段:{{record[1]}}円</p>
+                </li>
+                {% endfor %}
+            </div>
+            <div class="scrolldown4"><span>Scroll→</span></div>
+          </div>
+          <p class="footer-c"></p>
+
+<!-------------------------------------------------------------------------------------------------------------->
+
+          <div class="products">
+            <h2>おすすめ商品</h2>
+            <div class="div">
+              <ul class="horizontal-items">
+                {% for record in random_records %}
+                <li>
+                  <a href="{{ url_for('syousai', Goods_ID=record[3]) }}">
+                    <div class="border">
+                      <img src="{{ url_for('static', filename='img/' + record[2]) }}" alt=record[0] width="220px" height="220px" >
+                    </div>
+                </a>
+                  <p class="syo">商品名:{{record[0]}}</p>
+                  <p class="ne">値段:{{record[1]}}円</p>
+                </li>
+                {% endfor %}
+            </ul>
+              
+            </div>
+            <div class="scrolldown4"><span>Scroll→</span></div>
+          </div>
+          <p class="footer-c"></p>
+
+<!-------------------------------------------------------------------------------------------------------------->
+
+          <div class="products">
+            <h2>人気商品</h2>
+            <div class="div">
+              <ul class="horizontal-items">
+                {% for record in random_records_1 %}
+                <li>
+                  <a href="{{ url_for('syousai', Goods_ID=record[3]) }}">
+                    <div class="border">
+                      <img src="{{ url_for('static', filename='img/' + record[2]) }}" alt=record[0] width="220px" height="220px">
+                    </div>
+                </a>
+                  <p class="syo">商品名:{{record[0]}}</p>
+                  <p class="ne">値段:{{record[1]}}円</p>
+                </li>
+                {% endfor %}
+              </ul>
+
+            </div>
+            <div class="scrolldown4"><span>Scroll→</span></div>
+        </div>
+        <p class="footer-c"></p>
+        <!-------------------------------------------------------------------------------------------------------------->
+
+        <div class="products">
+          <h2>リクエスト商品</h2>
+          <div class="div">
+            <ul class="horizontal-items">
+              {% for record in result_3 %}
+              <li>
+                <a href="{{ url_for('request_syousai', Goods_ID=record[3]) }}">
+                  <div class="border">
+                    <img src="{{ url_for('static', filename='img/' + record[2]) }}" alt=record[0] width="220px" height="220px">
+                  </div>
+              </a>
+                <p class="syo">商品名:{{record[0]}}</p>
+                <p class="ne">値段:{{record[1]}}円</p>
+              </li>
+              {% endfor %}
+          </ul>
+            
+          </div>
+          <div class="scrolldown4"><span>Scroll→</span></div>
+        </div>
+
+
+<!-------------------------------------------------------------------------------------------------------------->
+      </div>
+    </main>
+
+<!-------------------------------------------------------------------------------------------------------------->
+
+
+
+      <footer id="footer">
+        <!-- <p class="border"></p> -->
+        <p class="footer-b"></p>
+        <p class="mini">セカンド チャンス</p>
+        <h4 class="fo">2nd Chance</h4>
+        <div class="p">
+          <p class="p1">TEL 0000-00-0000</p>
+          <p class="p2">受付時間 平日 9:00〜21:00</p>
+          <a href="/otoiawase/"><p class="p3">お問い合わせフォーム</p></a>
+        </div>
+
+        <p class="footer-b"></p>
+        <p class="footer-p">利用規約・個人情報保護について</p>
+        <p class="footer-b"></p>
+
+        <p class="copy">
+          2023 &copy; Copyright 2nd Chance. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/top-common.js') }}"></script>
+</html>

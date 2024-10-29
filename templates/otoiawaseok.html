@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>送信完了</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/reset.css') }}"
+  />
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/otoiawaseok.css') }}"
+    />
+</head>
+<body>
+
+    <header>
+        <h1>2nd Chance</h1>
+      </header>
+    <div class="icon">
+
+        <img src="{{ url_for('static', filename='images/kessai.jpg') }}" alt="icon">
+        <h2 class="kessai">お問い合わせありがとうございます</h2>
+
+
+    <p class="mail">
+        お問い合わせ内容を受け付けました。必要に応じて、後ほど担当者よりご連絡させていただきます。
+    </p>
+
+    <a href="/top/">トップに戻る</a>
+  </div>
+</body>
+</html>

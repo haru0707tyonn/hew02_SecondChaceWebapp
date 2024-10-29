@@ -1,0 +1,13 @@
+「起動用メモ」
+
+cd C:\secondchance_app
+
+conda activate secondchance_app
+
+set FLASK_APP=app
+
+set FLASK_ENV=development
+
+flask run
+
+「やることめも」

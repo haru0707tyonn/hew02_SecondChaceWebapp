@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+    <title>ログインページ</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/sobu-common.css') }}"
+    />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/screensaver.css') }}"
+  />
+
+    <!-- jQuery本体 CDN -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery実行ファイル -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+
+  </head>
+  <div id="screenSaver">
+    <video id="video" poster="{{ url_for('static', filename='images/loade.jpg') }}" webkit-playsinline playsinline muted autoplay loop>
+      <!--
+      poster：動画ファイルが利用できない環境で代替表示される画像
+      webkit-playsinline：iOS 9までのSafari用インライン再生指定
+      playsinline：iOS 10以降のSafari用インライン再生指定
+      muted：音声をミュートさせる
+      autoplay：動画を自動再生させる
+      loop：動画をループさせる
+      controls：コントロールバーを表示する
+      -->
+      <source src="{{ url_for('static', filename='video/movie_1.mp4') }}" type="video/mp4">
+      <p>動画を再生できる環境ではありません。</p>
+    </video>
+    <h2 id="s-text">画面をクリックして元に戻る</h2>
+  </div>
+
+  <header>
+    <h1>2nd Chance</h1>
+  </header>
+
+  <body>
+
+    
+    <h2 class="login">ログイン</h2>
+
+    <form method="POST">
+    <div class="login01">
+      <h3 class="login">メールアドレス</h3>
+      <input
+        type="email"
+        id="Email"
+        name="Email"
+        class="login"
+        value=""
+        placeholder="メールアドレス"
+        required
+      />
+      <h3 class="login">パスワード</h3>
+      <div class="paspas">
+        <input
+            type="password"
+            id="Password"
+            name="Password"
+            class="login"
+            maxlength="20"
+            value=""
+            placeholder="パスワード"
+            pattern="^[0-9a-zA-Z]+$"
+            required
+        />
+        <button id="btn_passview" onclick="togglePasswordVisibility(); return false;">表示</button>
+      </div>
+      <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("Password");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+
+        function validateForm() {
+            // ここに必要な場合の追加のフォームバリデーションロジックを追加してください
+            return false; // フォーム送信を防ぐために false を返します
+        }
+    </script>
+     </span>
+    </div>
+
+    <div class="login02">
+      <button class="login" type="submit">ログイン</button>
+      <p class="border"></p>
+      <p class="come">または</p>
+      <a class="login" href="/create/">新規登録</a>
+    </div>
+
+    </form>
+
+    <a
+      class="w"
+      href="javascript:void(0);"
+      ondblclick="location.href='/bosslogin/'"
+      ><img
+        class="login"
+        src="{{ url_for('static', filename='images/seka.jpg') }}"
+    /></a>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/screensaver.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/sobu-common.js') }}"></script>
+
+
+</html>

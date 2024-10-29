@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一覧表示機能/title>
+</head>
+<body>
+    <main>
+        <h2>商品</h2>
+            {% for exhibited_products in records %}
+                  <img src="{{ url_for('static', filename='画像保存されているフォルダ名/' + record[0]) }}" alt=record[0] width="220px" height="220px">
+              <p>商品名:{{record[1]}}</p>
+              <p>値段:{{record[2]}}円</p>
+            {% endfor %}
+    </main>
+</body>
+</html>

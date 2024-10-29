@@ -1,0 +1,700 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a.master03 {
+  margin-top: 35px;
+  width: 150px;
+  height: 15px;
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1vw;
+  border: solid 1px;
+  border-radius: 3px;
+}
+a.master03:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  background-color: #333333;
+}
+
+main {
+  margin: 0 auto 0 auto;
+  width: 1450px;
+  height: 100%;
+}
+
+/* オリジナル*/
+div.flex {
+  display: flex;
+  padding: 50px 0 0 0;
+  margin: 0 0 10px 0;
+}
+.pic {
+  width: 467px;
+  height: 467px;
+  margin: 0 0 0 225px;
+}
+div.mono {
+  margin-top: 20px;
+  margin-left: 60px;
+}
+div.mono h1 {
+  margin: -20px 0 0 0;
+  font-size: 1.7rem;
+}
+.money {
+  margin: 10px 0 10px 0;
+  font-size: 1.3rem;
+}
+div.iineandkome {
+  display: flex;
+  margin: 40px 0 0 0;
+}
+div.iine a {
+  padding: 15px 20px;
+  margin: 0 50px 0 0;
+  border-radius: 10px;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: yellow;
+}
+div.kome a {
+  padding: 15px 20px;
+  margin: 0 50px 0 0;
+  border-radius: 10px;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: green;
+}
+div.buy {
+  margin: 60px 0 0 0;
+}
+div.buy a {
+  padding: 15px 160px;
+  margin: 0 80px 0 0px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: red;
+}
+
+div.request {
+  margin: 60px 0 0 0;
+}
+div.request a {
+  padding: 15px 50px;
+  margin: 0 80px 0 0px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: blue;
+}
+
+.syosai {
+  display: flex;
+}
+hr.main {
+  margin: 10px 0 10px 0;
+}
+.category {
+  display: flex;
+  margin: 20px 0 20px 0;
+}
+.category h3 {
+  margin: 0 50px 0 0;
+  width: 150px;
+  font-size: 1.1rem;
+}
+.category ul {
+  margin: 0 0 0 50px;
+}
+.category ul li {
+  margin: 5px 0 0 -50px;
+  list-style: none;
+}
+.category .list li a {
+  color: blue;
+}
+.sonota {
+  display: flex;
+  margin: 10px 0 0 0;
+}
+.sonotatitle {
+  margin: 0 50px 0 0;
+  width: 150px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.sonotasyosai {
+  font-size: 1rem;
+}
+.user2 {
+  display: flex;
+  margin: 10px 0 0 0;
+}
+.user2 .namename {
+  margin: 10px 0 10px 10px;
+  font-size: 1.3rem;
+}
+.user2 p {
+  margin: auto 0 auto 10px;
+}
+.user2 .hyoka {
+  display: flex;
+}
+.picpic {
+  display: flex;
+  margin: 10px 0 0 225px;
+}
+.picpicpic {
+  margin: 0 10px 0 0;
+}
+.picpicpic img {
+  height: 58px;
+  width: 58px;
+}
+
+div.ue h2 {
+  font-size: 1.2rem;
+  margin: 45px 0 0 0;
+}
+div.sita {
+  display: flex;
+}
+div.sita h2 {
+  font-size: 1.2rem;
+  margin: 30px 0 0 225px;
+}
+div.sita .comekazu {
+  margin: 30px 0 0 0;
+  font-size: 1.2rem;
+}
+div.honbun {
+  width: 1000px;
+  margin: 0 auto 0 auto;
+  font-size: 1rem;
+  line-height: 30px;
+}
+.user {
+  display: flex;
+  margin: 0 0 0 225px;
+}
+.user p {
+  margin: auto 0 auto 10px;
+}
+div.comedasihonbun {
+  width: 1000px;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: pink;
+  line-height: 20px;
+}
+div.comesyupinhonbun {
+  width: 1000px;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: blue;
+  line-height: 20px;
+}
+div.comesonotahitohonbun {
+  width: 1000px;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #333;
+  line-height: 20px;
+}
+div.comebutton {
+  margin: 50px 0 30px 470px;
+}
+div.comebutton a {
+  padding: 10px 160px;
+  margin: 0 80px 0 0px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: green;
+}
+.osusume {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 0 225px;
+}
+.osusumepic {
+  width: 17%;
+}
+.osusumepic img {
+  margin: 0 15px 0 0;
+  height: 187px;
+  width: 187px;
+}
+.osusumepic a {
+  text-decoration: none;
+  color: black;
+}
+.osusumepic p {
+  margin: 5px 0 15px 0;
+  font-size: 0.8rem;
+  line-height: 17px;
+}
+
+div.sbutton {
+  margin: 60px 0 0 0;
+}
+div.sbutton a {
+  padding: 15px 150px;
+  margin: 0 0 0 420px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: blue;
+}
+
+footer {
+  margin: 30px auto 0 auto;
+  height: 100px;
+  text-align: center;
+}
+
+/*                      */
+.box-1 {
+  background: skyblue;
+}
+
+.box-2 {
+  background: tomato;
+}
+
+.box-3 {
+  background: limegreen;
+}
+
+.box-4 {
+  background: pink;
+}
+
+.hidden {
+  display: none;
+}
+.flex {
+  overflow: hidden;
+  position: relative;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.box {
+  height: 100%;
+  min-width: 100%;
+}
+
+.box-1 {
+  background: skyblue;
+}
+
+.box-2 {
+  background: tomato;
+}
+
+.box-3 {
+  background: limegreen;
+}
+
+.box-4 {
+  background: pink;
+}
+
+#lt,
+#gt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 24px;
+  padding: 0 6px;
+  cursor: pointer;
+}
+
+#lt {
+  top: 300px;
+  left: 227px;
+}
+
+#gt {
+  top: 300px;
+  right: 760px;
+}
+
+#lt:hover,
+#gt:hover {
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
+
+/*  mypage  */
+.gazoflex {
+  display: flex;
+  box-sizing: border-box;
+  margin-left: 320px;
+}
+.myuser {
+  font-size: 2rem;
+  margin: 30px 0 0 30px;
+  width: 450px;
+}
+.b {
+  margin: 50px 0 0 100px;
+}
+#header {
+  box-sizing: border-box;
+  background: #ccc;
+  height: 50px;
+}
+#sub {
+  box-sizing: border-box;
+  top: 150px;
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  overflow: auto;
+  background: #eee;
+  padding: 20px;
+}
+#sub h2 {
+  font-size: 1.2rem;
+  margin: 30px 0 0 0;
+}
+#sub ul li {
+  list-style: none;
+  margin: 10px 0 0 0;
+}
+
+.tosyusyu {
+  display: flex;
+  margin: 50px 0 0 220px;
+  color: white;
+}
+.komo {
+  padding: 30px 150px;
+  background-color: #888;
+  border: white 1px solid;
+  text-align: center;
+}
+.komo p {
+  font-size: 1.3rem;
+}
+.komo div {
+  font-size: 1.3rem;
+  margin: 10px 0 0 0;
+}
+.rankandkeep {
+  display: flex;
+  margin: 30px 0 0 220px;
+  text-align: center;
+}
+.rankandkeep h4 {
+  margin: 30px 0 10px 0;
+  font-size: 1.3rem;
+}
+.rankup {
+  margin: 0 120px 0 260px;
+}
+.tugimade img {
+  position: relative;
+}
+.tugimade h2 {
+  position: absolute;
+  text-align: center;
+  width: 230px;
+  bottom: 100px;
+  right: 859px;
+  font-size: 1.5rem;
+}
+.tugimade h3 {
+  position: absolute;
+  text-align: center;
+  width: 230px;
+  bottom: 70px;
+  right: 859px;
+  font-size: 1.8rem;
+}
+.kip h2 {
+  position: absolute;
+  text-align: center;
+  width: 230px;
+  bottom: 100px;
+  right: 509px;
+  font-size: 1.5rem;
+}
+.kip h3 {
+  position: absolute;
+  text-align: center;
+  width: 230px;
+  bottom: 70px;
+  right: 509px;
+  font-size: 1.8rem;
+}
+
+h4.ookini {
+  margin: 50px 0 0 240px;
+  font-size: 1.3rem;
+}
+.ookini {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0 0 240px;
+}
+.osusume {
+  display: flex;
+  flex-wrap: wrap;
+}
+.onikipic {
+  width: 17%;
+}
+.onikipic img {
+  margin: 0 15px 0 0;
+  height: 187px;
+  width: 187px;
+}
+.onikipic a {
+  text-decoration: none;
+  color: black;
+}
+.onikipic p {
+  margin: 5px 0 15px 0;
+  font-size: 0.8rem;
+  line-height: 17px;
+}
+
+/*  usermaintenance  */
+table#maintenanceTD {
+  width: 1450px;
+  margin: 0 auto o auto;
+  border: none;
+  border-spacing: 3px;
+  text-align: left;
+}
+table#maintenanceTD th {
+  padding: 10px;
+  border: solid 3px black;
+  background-color: #ddd;
+  width: 25%;
+}
+table#maintenanceTD td {
+  padding: 10px;
+  border: solid 1px black;
+  /*  background-color: #ddd;*/
+  width: 25%;
+}
+.searchh {
+  margin: 30px 0 0 0;
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #767d83;
+  border-radius: 10px;
+}
+
+.searchh input {
+  width: 750px;
+  height: 45px;
+  padding: 5px 15px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+}
+
+.searchh -input::placeholder {
+  color: #767d83;
+}
+
+.searchh button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.searchh button::after {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%23767d83%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  content: "";
+}
+div.userbotton {
+  display: flex;
+}
+div.s a {
+  margin: 0 15px 0 20px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+div.c a {
+  margin: 0 15px 0 0;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+div.e a {
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+
+/*  tablemaintenance  */
+.tablename {
+  margin: 90px 0 0 0;
+  padding: 20px 20px;
+  width: 700px;
+  font-size: 2rem;
+  background-color: aqua;
+}
+
+.headersita {
+  display: flex;
+}
+.sitabotton {
+  display: flex;
+  margin: 40px 0 0 70px;
+}
+div.tuika a {
+  padding: 15px 30px;
+  margin: 0 50px 0 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-decoration: none;
+  background-color: blue;
+}
+div.tablebotton {
+  display: flex;
+  width: 160px;
+}
+div.tablek a {
+  margin: 0 15px 0 20px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+div.tables a {
+  margin: 0 15px 0 0;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+
+.Pagination {
+  display: flex;
+  margin: 30px 0 0 0;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+}
+.Pagination-Item-Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  font-size: 20px;
+  color: #4169e1;
+  font-weight: bold;
+  transition: all 0.15s linear;
+  text-decoration: none;
+}
+.Pagination-Item-Link-Icon {
+  width: 20px;
+}
+.Pagination-Item-Link.isActive {
+  pointer-events: none;
+  color: #111;
+}
+.Pagination-Item-Link:not(.isActive):hover {
+  opacity: 0.5;
+}
+.scroll {
+  margin-inline: auto;
+  margin-top: 50px;
+  overflow-x: auto; /* tableタグのはみ出た要素を隠す */
+  white-space: nowrap; /* テキストの折り返しなし */
+  width: 1450px;
+}
+table#tablemaintenanceTD {
+  margin: 0 auto o auto;
+  border: none;
+  width: 2000px; /* tableタグの親要素より広く */
+  text-align: left;
+}
+table#tablemaintenanceTD th {
+  padding: 10px;
+  border: solid 3px black;
+  background-color: #ddd;
+  width: 17%;
+}
+table#tablemaintenanceTD td {
+  padding: 10px;
+  border: solid 1px black;
+  /*  background-color: #ddd;*/
+}

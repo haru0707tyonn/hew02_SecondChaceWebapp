@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>マイページ</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mypage.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <a name="header"></a>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="fle">
+          <a class="test2" href="/top/"><img src="{{ url_for('static', filename='images/2nd.jpg') }}" class="nd"></a>
+          <form method="post"  class="search_container" action="/kennsaku/">
+            <input type="text" id="search_query" class="n" name="search_query"  placeholder="  キーワード検索" size="100" required>
+            <button type="submit"></button>
+            <input type="submit" value="&#xf002">
+          </form>
+          <div class="f30">
+            <div class="ma">
+              <a href="/top/" class="ho1"><img src="{{ url_for('static', filename='images/top.jpg') }}" class="nav"><br>
+                <p class="pp">トップ</p>  
+              </a>
+            </div>
+            <div class="ma">
+              <a href="/mypage/" class="ho2"><img src="{{ url_for('static', filename='images/user.jpg')}}" class="nav"><br>
+                <p class="pp">マイページ</p>  
+              </a>
+            </div>
+            <div class="ma">
+              <a href="/osirase/" class="ho3"><img src="{{ url_for('static', filename='images/mega.jpg')}}" class="nav"><br>
+                <p class="pp">お知らせ</p>  
+              </a>
+            </div>
+            <div class="ma">
+              <a href="#info1" class="modal-open-1"><img src="{{ url_for('static', filename='images/camera.jpg')}}" class="nav"><br>
+                <p class="ppp">出品/リクエスト</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    <main>
+
+      
+      <!-- <div id="css-slider">
+        <div class="slider-wrapper">
+          <div class="slide-item"><img src="{{ url_for('static', filename='images/picture02.gif')}}"/></div>
+          <div class="slide-item"><img src="{{ url_for('static', filename='images/slide1.jpg')}}"/></div>
+          <div class="slide-item"><img src="{{ url_for('static', filename='images/slide2.jpg')}}"/></div>
+        </div>
+      </div> -->
+
+
+
+
+      
+
+      <section id="info1">
+        <div class="modaru">
+        <a href="/syuppin/" class="atagu"><p class="syu">出品</p></a>
+        <h2 class="or">or</h2>
+        <a href="/request_syuppin/" class="atagu"><p class="riku">リクエスト</p></a>
+        </div>
+      </section>
+        <div id="info2" class="modaru1">
+          <h4 class="meimeimei">現在のプロフィール</h4>
+          <div class="pro1">
+
+            <!-- 選択した画像を表示する領域 -->
+            <img class="profile-icon" src="{{ url_for('static', filename='img/' + record[7]) }}"/>
+
+
+              <!-- <a class="kaeru" href="">変更する</a> -->
+          <div class="meimei">
+          <h4>アカウント名</h4>
+          <p class="pu">{{record[0]}}</p>
+        </div>
+        </div>
+          <p class="bar"></p>
+          <form action="/mypage/" method="post" enctype="multipart/form-data">
+          <h4 class="h4">変更の場合</h4>
+          <div class="f12">  
+            <div class="iconicon">
+            <div id="preview" class="profile-icon"  enctype="multipart/form-data"></div>
+            <label for="fileInput" class="file-input-label">ファイルを選択</label>
+            <input type="file" id="fileInput"  class="icon" name="Picture" onchange="previewImage(this)">
+            </div>
+            <h3 class="member">アカウント名<span class="aka">必須</span></h3>
+            <input type="text" class="bar" name="User_Name" maxlength="10" value="" placeholder="　例）春  太郎 "/>
+          </div>
+
+          <div class="f13">
+            <button class="ru" type="submit">更新</button>
+          </div>
+        </div>
+      </form>
+
+      <style>
+        .iconicon {
+          position: relative;
+          overflow: hidden;
+        }
+    
+        .file-input-label {
+          text-align: center;
+          padding: 8px 5px;
+          margin-top: 10%;
+          margin-left: 7%;
+          width: 30%;
+          height: 15%;
+          display: inline-block;
+          background-color: #555;
+          color: #fff;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+
+        .file-input-label:hover {
+          opacity: 0.5;
+        }
+    
+        .icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+
+      </style>
+
+      <script>
+        function previewImage(input) {
+          var preview = document.getElementById('preview');
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              preview.style.backgroundImage = 'url(' + e.target.result + ')';
+            }
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+      </script>
+
+        
+        <section id="info3">
+          <div class="modaru3">
+            <h4>現在の本人情報</h4>
+            <div class="f14">
+              <p class="text05">名前：{{record[1]}}</p>
+              <p class="text05">生年月日：{{record[2]}}</p>
+            </div>
+            <p class="bar"></p>
+            <h4>変更の場合</h4>
+            <div class="f14"> 
+              <form action="/mypage/" method="post">
+              <h3 class="text06">名前<span class="aka">必須</span></h3>
+              <input type="text" class="bar" name="Real_Name" maxlength="10" value="" placeholder="　例）春  太郎 "/>
+              <h3 class="text06">生年月日<span class="aka">必須</span></h3>
+              <input type="date" class="bar" name="BrithDate" />
+            </div>
+            <div class="f13">
+              <button class="ru" type="submit">更新</button>
+            </div>
+          </form>
+          </div>
+        </section>
+
+        <div id="info4" class="modaru8">
+          <h4>現在の住所・郵便番号</h4>
+          <div class="f15">
+            <h3 class="text07">－現在の郵便番号－</h3>
+              <p class="come">〒{{record[3]}}</p>
+              <h3 class="text07">－現在の住所－</h3>
+              <p class="come">{{record[4]}}</p>
+          </div>
+          <p class="bar"></p>
+          <form action="/mypage/" method="post">
+          <div class="f15">
+            <h3 class="text07">郵便番号<span class="aka">必須</span></h3>
+            <input type="text" class="bar01" maxlength="100" value="" name="Post_Code" placeholder="郵便番号"/>
+            <h3 class="text07">住所<span class="aka">必須</span></h3>
+            <input type="text" class="bar03" maxlength="100" value="" name="Address" placeholder="住所"/>
+          </div>
+          <div class="f13">
+            <button class="ru" type="submit">更新</button>
+          </div>
+          </form>
+        </div>
+
+        <div id="info5" class="modaru8">
+          <h4>現在の電話番号</h4>
+          <div class="maa">
+            <p class="tele">{{record[5]}}</p>
+          </div>
+          <p class="bar"></p>
+          <h4>変更の場合</h4>
+          <form action="/mypage/" method="post">
+          <input type="text" class="bar04" maxlength="100" value="" name="Tel"  placeholder="　例）0000-0000-0000"/>
+          <div class="f13">
+            <button class="ru" type="submit">更新</button>
+          </div>
+          </form>
+        </div>
+
+        <div id="info6" class="modaru8">
+          <h4>現在の支払方法</h4>
+          <p class="kure">クレジットカード決済</p>
+          <img class="kureka" src="{{ url_for('static', filename='images/kure.jpg')}}"/>
+          <p class="ku">登録したカード情報を表示</p>
+          <p class="bar"></p>
+          <h4>変更の場合</h4>
+          <h3 class="text07">カード番号<span class="aka">必須</span></h3>
+          <input type="text" class="bar05" maxlength="10" value="" placeholder="14～16桁の番号"/>
+          <h3 class="text07">セキュリティコード<span class="aka">必須</span></h3>
+          <input type="text" class="bar5" maxlength="10" value="" placeholder=""/>
+          <h3 class="text07">カード名義<span class="aka">必須</span></h3>
+          <input type="text" class="bar05" maxlength="10" value="" placeholder="例）TARO　YAMADA"/>
+          <div class="kure">
+          <h3 class="text07">有効期限</h3>
+          <select class="se2">
+            <option>00</option>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>月/
+          <select class="se2">
+            <option>00</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+          </select>年
+          </div>
+          <div class="f13">
+            <a class="ru" href="">更新</a>
+          </div>
+        </div>
+
+        <div id="info7" class="modaru8">
+          <h4>通知設定</h4>
+          <p class="bar"></p>
+          <div class="f18">
+            <p class="text08">いいね！の通知</p>
+            <label class="toggle-button-004">
+              <input type="checkbox"/>
+            </label>
+          </div>
+          <div class="f18">
+            <p class="text09">投稿・コメントの通知</p>
+            <label class="toggle-button-004">
+              <input type="checkbox"/>
+            </label>
+          </div>
+          <div class="f18">
+            <p class="text10">出品・リクエストの通知</p>
+            <label class="toggle-button-004">
+              <input type="checkbox"/>
+            </label>
+          </div>
+        </div>
+
+        <div id="info8" class="modaru8">
+          <h4>鑑定プロセス</h4>
+          <p class="bar"></p>
+          <p class="text08-2">
+            スニーカー・ストリートウェア・ハイ<br>
+            ブランド・トレカ＆ゲームなどのカテ<br>
+            ゴリ別に弊社の数万件以上の鑑定実績<br>
+            を持つ専属の鑑定士が鑑定を行います。
+          </p>
+        </div>
+
+        <div id="info9" class="modaru9">
+          <h4>リクエスト機能</h4>
+          <p class="bar"></p>
+          <p class="text09-2">
+            ・出品されていない。<br>
+            ・欲しいのに見つからない。<br>
+          </p>
+          <P class="text09-3">
+            そんな商品をリクエストしよう
+          </P>
+        </div>
+
+        <div class="flex">
+          <div id="sub">
+            <h2>アカウント</h2>
+            <ul>
+              <a
+                href="#info2"
+                class="modal-open-2"
+                data-content-width="600"
+                data-content-height="400"
+                ><li>プロフィール</li></a
+              >
+            </ul>
+            <ul>
+              <a href="/logout/"><li>ログアウト</li></a>
+            </ul>
+            <ul>
+              <a href="/quit/"><li>退会</li></a>
+            </ul>
+            <h2>個人情報</h2>
+            <ul>
+              <a href="#info3" class="modal-open-3"> <li>本人情報</li></a>
+              <a href="#info4" class="modal-open-4"> <li>住所</li></a>
+              <a href="#info5" class="modal-open-5"> <li>電話番号</li></a>
+              <!-- <a href="#info6" class="modal-open-6"> <li>支払方法</li></a> -->
+            </ul>
+            <h2>設定</h2>
+            <ul>
+              <a href="#info7" class="modal-open-7"><li>通知方法</li></a>
+            </ul>
+            <h2>ガイド</h2>
+            <ul>
+              <a href="#info8" class="modal-open-8"><li>設定について</li></a>
+              <a href="#info9" class="modal-open-9"><li>リクエスト機能</li></a>
+            </ul>
+            <a href="#header"><img class="topseka" src="{{ url_for('static', filename='images/topseka.jpg') }}"></a>
+          </div>
+
+          <p class="bor"></p>
+
+          <div class="w100">
+            <div class="flex2">
+              <img class="hidari" src="{{ url_for('static', filename='img/' + record[7]) }}"/>
+              <p class="name">{{record[0]}}</p>
+            </div>
+<!-- {{ url_for('static', filename='images/top.jpg') }} -->
+            {% block content %}
+            <div class="flex3">
+              <a class="tori" href="/syuppintyuu/">
+                <div class="adad">
+                  <h6>{{record_1}}</h6>
+                  <p class="ww200" >出品中・リクエスト中
+                  </p>
+                </div>
+              </a>
+              <a class="tori" href="/torihikikan/">
+                <div class="adad">
+                  <h6>{{record_2}}</h6>
+                  <p class="w200">取引完了</p>
+                </div>
+              </a>
+              <a class="tori" href="/rireki/">
+                <div class="adad">
+                  <h6>{{record_3}}</h6>
+                  <p class="w200">購入履歴</p>
+                </div>
+              </a>
+            </div>
+            {% endblock%}
+
+
+
+            <div class="bac">
+              <!-- 円形のゲージ表示 -->
+
+
+            <div class="bac">
+              <div class="rad">
+                <div class="flex4">
+                  <p class="ki">ランクアップ</p>
+                  <p class="ki">現在のランク：{{ gauge_ranges[user_rank]['name'] }}</p>
+                </div>
+                <div class="flex4">
+                  <div class="gauge-container">
+                    <div class="gauge"></div>
+                    <div class="gauge-label">あと<br><br>{{ remaining_to_next_rank }} 円</div>
+                </div>
+                <div class="space"></div>
+                <img class="mig" src="{{ url_for('static', filename='images/' + gauge_ranges[user_rank]['image']) }}" alt="Rank Image" width="200px" height="200px" m>
+                </div>
+                <p class="si"></p>
+
+              </div>
+
+
+              <div class="flex5">
+                <div class="rad2">
+                  <span class="red">鑑定</span><br>
+                  <img class="img1" src="{{ url_for('static', filename='images/ser.jpg')}}"/>
+                  <p class="bar2"></p>
+                  <p class="come">
+                    正規品を保証する<br>
+                    安心フリマ
+                  </p>
+                </div>
+                <div class="rad2">
+                  <span class="red">ランク</span><br>
+                  <img class="img2" src="{{ url_for('static', filename='images/rank11.jpg')}}"/>
+                  <p class="bar2"></p>
+                  <p class="come">
+                    取引金額により<br>
+                    ランクアップ
+                  </p>
+                </div>
+                <div class="rad2">
+                  <span class="red">梱包</span><br>
+                  <img class="img3" src="{{ url_for('static', filename='images/box.jpg')}}"/>
+                  <p class="bar2"></p>
+                  <p class="come">
+                    基準を満たした商品を<br>
+                    購入者にお届け
+                  </p>
+                </div>
+              </div>
+              
+              <a name="a"></a>
+
+              <!-- <div class="okini">
+                <h5>お気に入り</h5>
+                <div class="flex6">
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                </div>
+                <div class="flex6">
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                  <a href=""><img class="oki" src="{{ url_for('static', filename='images/buy2.jpg')}}"/></a>
+                </div>
+              </div> -->
+
+            </div>
+
+
+          </div>          
+        </div>
+      </main>
+
+      <footer id="footer">
+        <!-- <p class="border"></p> -->
+        <p class="footer-b"></p>
+        <p class="mini">セカンド チャンス</p>
+        <h5 class="fo">2nd Chance</h5>
+        <div class="p">
+          <p class="p1">TEL 0000-0000-0000</p>
+          <p class="p2">受付時間 平日 9:00〜21:00</p>
+          <a href="/otoiawase/"><p class="p3">お問い合わせフォーム</p></a>
+        </div>
+
+        <p class="footer-b"></p>
+        <p class="footer-p">利用規約・個人情報保護について</p>
+        <p class="footer-b"></p>
+
+        <p class="copy">
+          2023 &copy; Copyright 2nd Chance. All rights reserved.
+        </p>
+      </footer>
+
+    </div>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/haru-common.js') }}"></script>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title></title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/kessai1.css') }}"
+  />
+
+  </head>
+
+  <body>
+ 
+      <header>
+        <h1>2nd Chance</h1>
+      </header>
+
+      <main>
+        <h2 class="ue">お客様情報の入力</h2>
+        <p class="border"></p>
+        
+      <form method="POST" action="/kessai1/" id="kessai">
+        <div class="pon">
+          <div class="iro">1</div>
+          <P class="sen"></P>
+          <div class="kuro">2</div>
+          <P class="sen"></P>
+          <div class="kuro">3</div>
+        </div>
+
+        <div class="poko">
+          <p class="mozi1">お客様情報</p>
+          <p class="mozi2">ご注文内容確認</p>
+          <p class="mozi3">注文完了</p>
+        </div>
+
+        <div class="member01">
+          <h3 class="member">名前<span>必須</span></h3>
+          <input type="text" name="Real_Name" class="bar" maxlength="100" value="{{record[0]}}" placeholder="" pattern="^[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠]*$"  required/>
+
+          <h3 class="member1">住所<span>必須</span></h3>
+          〒 <input type="text" name="Post_Code" class="bar01" maxlength="100" value="{{record[1]}}" placeholder="" pattern="^[0-9]{7,7}$"   required/><br>
+          
+          <input type="text" name="Address" class="bar03" maxlength="100" value="{{record[2]}}" placeholder="　市区町村" required/>
+          
+          <h3 class="member1">電話番号<span>必須</span></h3>
+          <input type="text" class="bar" name="Tel" maxlength="100" value="{{record[3]}}" placeholder="" pattern="^[0-9]+$" required/>
+
+          <h3 class="member">メールアドレス<span>必須</span></h3>
+          <input type="email" class="bar" name="Email" maxlength="100" value="{{record[4]}}" placeholder=""  required/>
+        </div>
+
+        
+        <h2 class="sita">お支払方法</h2>
+        <p class="border"></p>
+
+        <div class="f1">
+          <div class="hako">
+            <p class="kome">
+              <input type="checkbox" name="Payment" id="konbini" value="コンビニ決済" >
+              <label for="konbini">コンビニ決済</label>
+            </p>
+          </div>
+            <img class="ko" src="{{ url_for ('static', filename='images/konb.jpg')}}">
+        </div>
+
+        <div class="f1">
+          <div class="hako">
+            <p class="kome">
+              <input type="checkbox" name="Payment" id="creditCard" value="クレジットカード決済" >
+              <label for="konbini">クレジットカード決済</label>
+            </p>
+          </div>
+            <img class="ke" src="{{ url_for ('static', filename='images/kure.jpg')}}">
+        </div>
+
+        <!-- <div class="kureka">
+          <div class="kurek">
+            <h3 class="member">カード番号</h3>
+            <input type="text" name="Number" class="ku1" maxlength="100" value="" placeholder="14～16桁の番号"  pattern="^[0-9]{14,16}$" required/>
+          </div>
+          <div class="kure">
+          <h3 class="member">セキュリティコード</h3>
+          <input type="text"  name="Cvc" class="ku2" maxlength="10" value="" placeholder="" pattern="^[0-9]{3,3}$" required/>
+          </div>
+        </div> -->
+        
+        <!-- <div class="kureka">
+          <div class="kurek">
+            <h3 class="member">カード名義</h3>
+            <input type="text" class="ku1" maxlength="100" value="" placeholder="例）TARO　YAMADA" pattern="^[a-zA-Z]+$" required/>
+          </div>
+          <div class="kure">
+          <h3 class="member">有効期限</h3>
+          <select class="se2" name="Valid1" required>
+            <option value="">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>月/
+          <select class="se2" name="Valid2" required>
+            <option value="">00</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+          </select>年
+          </div>
+        </div> -->
+
+        <div class="f3">
+          <a class="modo" href="/top/" ><p>トップページに戻る</p></a>
+          <button type="submit" class="next" onclick="submitForm()">注文する</button>
+        </div>
+
+      </form>
+
+        
+      </main>
+
+      <footer id="footer">
+
+      </footer>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/kessai-common.js') }}"></script>
+  </body>
+    
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ログイン</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/sobu-common.css') }}"
+    />
+
+    <!-- jQuery本体 CDN -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery実行ファイル -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='js/sobu-common.js') }}"
+    />
+  </head>
+
+  <header>
+    <h1>2nd Chance</h1>
+  </header>
+
+  <body>
+    <h2 class="login">管理者ログイン</h2>
+
+    <div class="login01">
+      <h3 class="login">メールアドレス</h3>
+      <input
+        type="text"
+        class="login"
+        maxlength="100"
+        value=""
+        placeholder="メールアドレス"
+      />
+      <h3 class="login">パスワード</h3>
+      <input
+        type="text"
+        class="login"
+        maxlength="100"
+        value=""
+        placeholder="パスワード"
+      />
+    </div>
+
+    <div class="login02">
+      <a class="login" href="/admin/">ログイン</a>
+    </div>
+
+    <a class="w" href="javascript:void(0);" ondblclick="location.href='/'"
+      ><img
+        class="login"
+        src="{{ url_for('static', filename='images/tabako.jpg') }}"
+    /></a>
+  </body>
+</html>

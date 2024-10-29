@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>お知らせ</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/rireki.css') }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+  </head>
+
+  <a name="header"></a>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="fle">
+          <a class="test2" href="/top/"><img src="{{ url_for('static', filename='images/2nd.jpg') }}" class="nd"></a>
+          <form method="post"  class="search_container" action="/kennsaku/">
+            <input type="text" id="search_query" class="n" name="search_query"  placeholder="  キーワード検索" size="100" required>
+            <button type="submit"></button>
+            <input type="submit" value="&#xf002">
+          </form>
+          <div class="f30">
+            <div class="ma">
+              <a href="/top/" class="ho1"><img src="{{ url_for('static', filename='images/top.jpg') }}" class="nav"><br>
+                <p class="pp">トップ</p>  
+              </a>
+            </div>
+            <div class="ma">
+              <a href="/mypage/" class="ho2"><img src="{{ url_for('static', filename='images/user.jpg')}}" class="nav"><br>
+                <p class="pp">マイページ</p>  
+              </a>
+            </div>
+            <div class="ma">
+              <a href="/osirase/" class="ho3"><img src="{{ url_for('static', filename='images/mega.jpg')}}" class="nav"><br>
+                <p class="pp">お知らせ</p>  
+              </a>
+            </div>
+            <div class="ma">
+              <a href="#info1" class="modal-open-1"><img src="{{ url_for('static', filename='images/camera.jpg')}}" class="nav"><br>
+                <p class="ppp">出品/リクエスト</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    <main>
+
+      
+      <!-- <div id="css-slider">
+        <div class="slider-wrapper">
+          <div class="slide-item"><img src="{{ url_for('static', filename='images/picture02.gif')}}"/></div>
+          <div class="slide-item"><img src="{{ url_for('static', filename='images/slide1.jpg')}}"/></div>
+          <div class="slide-item"><img src="{{ url_for('static', filename='images/slide2.jpg')}}"/></div>
+        </div>
+      </div> -->
+
+
+
+
+      
+
+      <section id="info1">
+        <div class="modaru">
+        <a href="/syuppin/" class="atagu"><p class="syu">出品</p></a>
+        <h2 class="or">or</h2>
+        <a href="/request_syuppin/" class="atagu"><p class="riku">リクエスト</p></a>
+        </div>
+      </section>
+
+      
+      <section id="info1">
+        <div class="modaru">
+        <a href="syuppin.html" class="atagu"><p class="syu">出品</p></a>
+        <h2 class="or">or</h2>
+        <a href="requ.html" class="atagu"><p class="riku">リクエスト</p></a>
+        </div>
+      </section>
+
+      <main>
+
+        <h1>購入履歴</h1>
+        {% for record in result %}
+        <div class="rire">
+          <img style="border-radius: 5px;" class="gazo" src="{{ url_for('static', filename='img/' + record['Picture']) }}"/>
+          <div class="rire2">
+            <h3>{{record["Goods_Name"]}}</h3>
+            <p class="nedan">￥{{record["Price"]}}</p>
+          </div>
+        </div>
+
+        <p class="sen"></p>
+        {% endfor %}
+  
+      </main>
+
+      <footer></footer>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/haru-common.js') }}"></script>
+</html>

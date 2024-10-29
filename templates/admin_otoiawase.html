@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <title>管理者お知らせ投稿ページ</title>
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin-otoiawase.css') }}"/>
+    
+
+        <!-- jQuery本体 CDN -->
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    
+        <!-- jQuery実行ファイル -->    
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/admin-otoiawase.js') }}"/>
+      </head>
+
+
+  <header>
+    <h1>2nd Chance</h1>
+  </header>
+
+
+  <h2 class="m">お問い合わせ一覧</h2>
+  <body>
+
+    <table>
+        <tr>
+            <th>名前</th>
+            <th>メールアドレス</th>
+            <th>内容</th>
+            <th>ジャンル</th>
+            <th>作成日時</th>
+        </tr>
+        <!-- 短縮テキストと詳細表示ボタン -->
+        {% for inquiry in inquiries %}
+        <tr>
+            <td>{{ inquiry.name }}</td>
+            <td>{{ inquiry.email }}</td>
+            <td>
+                <span class="content-preview">{{ inquiry.inquiry | truncate(12) }}</span>
+                <!-- 条件分岐で内容が長い場合のみ詳細表示を挿入 -->
+                {% if inquiry.inquiry|length > 12 %}
+                <span class="full-content" style="display: none;">{{ inquiry.inquiry }}</span>
+                <a href="javascript:void(0);" class="show-more">
+                    <!-- モーダルトリガーボタン -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inquiryModal">
+                        もっと見る
+                    </button>
+                </a>
+                {% endif %}
+            </td>
+            <td>{{ inquiry.genre }}</td>
+            <td>{{ inquiry.created_at.strftime('%Y年%m月%d日 %H時%M分') }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+    <!-- モーダル -->
+    <div class="modal fade" id="inquiryModal" tabindex="-1" role="dialog" aria-labelledby="inquiryModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="inquiryModalLabel">お問い合わせ内容</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- ここにお問い合わせの詳細を動的に挿入 -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BootstrapのJS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="path/to/jquery-3.6.0.min.js"></script>
+    <script src="path/to/show-more.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/admin-otoiawase.js') }}"></script>
+  </body>
+</html>

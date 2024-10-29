@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>マスターメンテナンス</title>
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/sobu-common.css') }}"
+    />
+
+    <!-- jQuery本体 CDN -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery実行ファイル -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='js/sobu-common.js') }}"
+    />
+  </head>
+
+  <header>
+    <h1>2nd Chance</h1>
+  </header>
+
+  <body>
+    <h2 class="master">マスターメンテナンス</h2>
+
+    <a class="master03" href="/admin/"><< 管理画面TOPへ</a>
+
+    <table>
+      <tr>
+        <th>マスターテーブル</th>
+        <th>項目</th>
+      </tr>
+
+      <tr>
+        <td>Genre</td>
+        <td><a class="master01" href="/Genre/">更新</a></td>
+      </tr>
+
+      <tr>
+        <td>User</td>
+        <td><a class="master01" href="/table/">更新</a></td>
+      </tr>
+
+      <tr>
+        <td>Rank</td>
+        <td><a class="master01" href="/table/">更新</a></td>
+      </tr>
+
+      <tr>
+        <td>Evaluation</td>
+        <td><a class="master01" href="/table/">更新</a></td>
+      </tr>
+
+      <tr>
+        <td>Employee</td>
+        <td><a class="master01" href="/table/">更新</a></td>
+      </tr>
+
+      <tr>
+        <td>Appraiser</td>
+        <td><a class="master01" href="/table/">更新</a></td>
+      </tr>
+
+      <tr>
+        <td>Payment</td>
+        <td><a class="master01" href="/table/">更新</a></td>
+      </tr>
+
+      <tr>
+        <td>Postage</td>
+        <td><a class="master01" href="/table/">更新</a></td>
+      </tr>
+
+      <tr>
+        <td>Manager</td>
+        <td><a class="master01" href="/table/">更新</a></td>
+      </tr>
+    </table>
+  </body>
+
+  <footer class="master">
+    <p class="master">1ページ目</p>
+    <a class="master02" href="#">次へ</a>
+  </footer>
+</html>

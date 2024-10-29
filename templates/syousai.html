@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>商品詳細画面</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/reset.css') }}"
+  />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/syousaitest.css') }}"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="wrap">
+        <header>
+          <div class="fle">
+            <a class="test2" href="/top/"><img src="{{ url_for('static', filename='images/2nd.jpg') }}" class="nd"></a>
+            <form method="post"  class="search_container" action="/kennsaku/">
+              <input type="text" id="search_query" class="n" name="search_query"  placeholder="  キーワード検索" size="100" required>
+              <button type="submit"></button>
+              <input type="submit" value="&#xf002">
+            </form>
+            <div class="f30">
+              <div class="ma">
+                <a href="/top/" class="ho1"><img src="{{ url_for('static', filename='images/top.jpg') }}" class="nav"><br>
+                  <p class="pp">トップ</p>  
+                </a>
+              </div>
+              <div class="ma">
+                <a href="/mypage/" class="ho2"><img src="{{ url_for('static', filename='images/user.jpg')}}" class="nav"><br>
+                  <p class="pp">マイページ</p>  
+                </a>
+              </div>
+              <div class="ma">
+                <a href="/osirase/" class="ho3"><img src="{{ url_for('static', filename='images/mega.jpg')}}" class="nav"><br>
+                  <p class="pp">お知らせ</p>  
+                </a>
+              </div>
+              <div class="ma">
+                <a href="#info1" class="modal-open-1"><img src="{{ url_for('static', filename='images/camera.jpg')}}" class="nav"><br>
+                  <p class="ppp">出品/リクエスト</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      <main>
+
+        
+
+
+        
+
+        <section id="info1">
+          <div class="modaru">
+          <a href="/syuppin/" class="atagu"><p class="syu">出品</p></a>
+          <h2 class="or">or</h2>
+          <a href="/request_syuppin/" class="atagu"><p class="riku">リクエスト</p></a>
+          </div>
+        </section>
+        {% block content %}
+        <section id="info2">
+          <div class="modaru2">
+            <h5>購入商品の確認</h5>
+            <table>
+              <tr>
+                <th>商品内容</th>
+                <th>商品価格</th>
+                <th>配送料</th>
+              </tr>
+              <tr>
+                <td>
+                  <img  class="mini" src="{{ url_for('static', filename='img/' + record[2]) }}" alt=record[0] width="220px" height="220px">
+                  {{ record[0] }}
+                </td>
+                <td>￥{{ record[1] }}</td>
+                <td>￥500</td>
+              </tr>
+            </table>
+            <div class="f11">
+              <p class="kane">合計:<span class="kuro">￥{{ record[1] + 500 }}</span></p>
+              <a class="next" href="/kessai1/">レジに進む</a>
+            </div>
+          </div>
+        </section>
+        <div class="flex">
+
+          <div class="cp_cssslider">
+            <input type="radio" name="cp_switch" id="photo1" checked/>
+            <label for="photo1"><img class="sido" src="{{ url_for('static', filename='img/' + record[2]) }}" alt=record[0] /></label>
+            <img  class="sido" src="{{ url_for('static', filename='img/' + record[2]) }}" alt=record[0]>
+            <input type="radio" name="cp_switch" id="photo2"/>
+            <label for="photo2"><img class="sido" src="{{ url_for('static', filename='images/boss.jpg') }}" /></label>
+            <img class="sido" src="{{ url_for('static', filename='images/boss.jpg') }}" />
+            <input type="radio" name="cp_switch" id="photo3"/>
+            <label for="photo3"><img class="sido" src="{{ url_for('static', filename='images/boss.jpg') }}" /></label>
+            <img class="sido" src="{{ url_for('static', filename='images/boss.jpg') }}" />
+            <input type="radio" name="cp_switch" id="photo4"/>
+            <label for="photo4"><img class="sido" src="{{ url_for('static', filename='images/boss.jpg') }}" /></label>
+            <img class="sido" src="{{ url_for('static', filename='images/boss.jpg') }}" />
+          </div>
+
+          <div class="ue">
+            <h1>{{ record[0] }}</h1>
+            <h2>{{ record[1] }}円 / 送料込み</h2>
+            <div class="ue01">
+              <a class="iine" href=""><img class="ine" src="{{ url_for('static', filename='images/iine3.jpg') }}"></a>
+              <a class="come"  href="#a"><img class="com" src="{{ url_for('static', filename='images/come.jpg') }}"></a>
+            </div>
+
+            <div class="ue02">
+            <a href="#info2" class="modal-open-2">商品を購入する</a>
+            </div>
+
+            <h3>商品の情報</h3>
+
+            <div class="flex02">
+              
+              <div class="ka">
+                <ul>
+                  <li><b>カテゴリー</b></li>
+                  <li>&nbsp;</li>
+
+                  <li><b>商品の状態</b></li>
+                  <li><b>発送の方法</b></li>
+                  <!-- <li><b>発送元の地域</b></li> -->
+                  <li><b>発送までの日数</b></li>
+                  <li><b>鑑定の有無</b></li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li><a class="kate" href="">{{ record_1[0] }}</a></li>
+
+                  <li>&nbsp;</li>
+                  <li>{{ record[4] }}</li>
+                  <li>{{ record[5] }}</li>
+                  <!-- <li>千葉県</li> -->
+                  <li>{{ record[6] }}</li>
+                  <li>{{ record[7] }}</li>
+                </ul>
+              </div>
+            </div>
+
+              <h3>出品者の情報</h3>
+
+            <div class="flex03">
+              <img class="seka" src="{{ url_for('static', filename='img/' + record_2[1]) }}" style="border-radius: 50%;">
+              <div>
+                <p class="yu01">{{ record_2[0] }}</p>
+              </div>
+            </div>
+          </div> 
+        </div>
+          
+
+        <a id="a"></a> 
+        <div class="setu">
+          <h4 class="se">商品説明</h4>
+          <p class="kasa">{{ record[8] }}</p>
+          <h4 class="se">コメント ({{ comment|length }})</h4>
+          <p class="kaasa"></p>
+
+          <!-- <div class="flex03">
+            <img class="seka" src="{{ url_for('static', filename='images/seka.jpg') }}">
+            <p class="yu01">購入者ユーザー名</p>
+          </div>
+          <p class="bac">コメント２</p>
+
+          <div class="flex030">
+            <img class="seka" src="{{ url_for('static', filename='images/seka.jpg') }}">
+            <p class="yu01">出品者ユーザー名</p>
+          </div>
+          <p class="ba">コメント１</p> -->
+
+          {% for comment in comment %}
+          <div class="{{ 'flex030' if comment[2] == record_2[0] else 'flex03' }}">
+            <img class="seka" src="{{ url_for('static', filename='img/' + comment[3]) }}" style="border-radius: 50%;" alt="{{comment[2]}}"> 
+            <p class="yu01">{{ comment[2] }}</p>
+          </div>
+            <p class="{{ 'ba' if comment[2] == record_2[0] else 'bac' }}">
+              {{ comment[0] }}
+            </p>
+
+          {% endfor %}
+        
+
+
+          <p>&nbsp;</p>
+
+          <form method="post">
+          <div class="kaku">
+            <input type="text" class="comment" name="content" placeholder=" コメントを入力…">
+            <button class="sou" type="submit">送信</button>
+          </div>        
+          </form>
+
+
+          <p class="kaasa"></p>
+        
+            <h4 class="se">他の商品</h4>
+            {% for random_record in random_records %}
+            <a href="{{ url_for('syousai', Goods_ID=random_record[1]) }}">
+                <img src="{{ url_for('static', filename='img/' + random_record[0]) }}" class="la" >
+            </a>
+            {% endfor %}
+        
+ 
+
+          </div>
+
+
+            
+
+        </div>
+
+      {% endblock %}
+      </main>
+
+
+
+    <footer id="footer">
+        <!-- <p class="border"></p> -->
+        <p class="footer-b"></p>
+        <p class="mini">セカンド チャンス</p>
+        <h4 class="fo">2nd Chance</h4>
+        <div class="p">
+          <p class="p1">TEL 0000-00-0000</p>
+          <p class="p2">受付時間 平日 9:00〜21:00</p>
+          <a href="/otoiawase/"><p class="p3">お問い合わせフォーム</p></a>
+        </div>
+
+        <p class="footer-b"></p>
+        <p class="footer-p">利用規約・個人情報保護について</p>
+        <p class="footer-b"></p>
+
+        <p class="copy">
+          2023 &copy; Copyright 2nd Chance. All rights reserved.
+        </p>
+      </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/top-common.js') }}"></script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>管理者トップ</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/sobu-common.css') }}"
+    />
+
+    <!-- jQuery本体 CDN -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery実行ファイル -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='js/sobu-common.js') }}"
+    />
+
+  <header>
+    <h1>2nd Chance</h1>
+  </header>
+
+  <body>
+    <h2 class="admin">ようこそ Admin 様</h2>
+
+    <div class="admin">
+      <a class="admin01" href="/master/">マスターメンテナンスページ</a>
+    </div>
+    <div class="admin">
+      <a class="admin02" href="/user/">ユーザー管理ページ</a>
+    </div>
+    <div class="admin">
+      <a class="admin04" href="/admin_osirase/">お知らせ投稿</a>
+    </div>
+    <div class="admin">
+      <a class="admin05" href="/admin_otoiawase/">お問い合わせ一覧</a>
+    </div> 
+    <div class="admin">
+      <a class="admin03" href="/">ログアウト</a>
+    </div>    
+
+  </body>
+
+  <img class="admin" src="{{ url_for('static', filename='images/boss.jpg') }}">
+
+</html>

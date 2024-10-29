@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+/* 共通 */
+
+
+body {
+  padding-top: 90px;
+  }
+  
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  background-color: #333333;
+  }
+
+p.border{
+  width: 80%;
+  margin-top: 0.5%;
+  margin-left: 10%;
+  border-bottom: solid 1px #000;
+}
+
+div.pon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.poko{
+  display: flex;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+div.iro{
+  padding: 1.8%;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 900;
+  background-color: #3399cc;
+}
+div.kuro{
+  padding: 1.8%;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 900;
+  background-color: #333333;
+}
+
+p.sen{
+  width: 5%;
+  height: 10px;
+  border: solid 7px #333333;
+}
+p.mozi1{
+  margin-top: 1%;
+  font-size: 0.8vw;
+  font-weight: 900;
+}
+p.mozi2{
+  margin: 1% 4.8% 0 4.8%;
+  font-size: 0.8vw;
+  font-weight: 900;
+}
+p.mozi3{
+    margin-top: 1%;
+    font-size: 0.8vw;
+    color: #3399cc;
+    font-weight: 900;
+}
+
+
+div.icon{
+  margin-top: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+h2.kane {
+  width: 100%;
+  margin-top: 30px;
+  margin-left: -10px;
+  margin-bottom: -2%;
+  font-size: 3vw;
+}
+
+img{
+  width: 17vw;
+}
+
+h2.kessai {
+  font-size: 2.5vw;
+}
+
+p.mail {
+  margin-top: 30px;
+  margin-bottom: 5%;
+  font-size: 1.2vw;
+  letter-spacing: 5px;
+}
+
+a{
+  padding: 1.5% 3%;
+  border: solid 1px;
+  font-size: 1.1vw;
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  background-color: #333333;
+  border-radius: 10px;
+}
+
+a:hover{
+  opacity: 0.5;
+}
+

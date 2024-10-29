@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>出品ページ</title>
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/reset.css') }}"
+  />
+  <link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='css/kei-common.css') }}"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+
+    <!-- jQuery本体 CDN -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/syuppin.js') }}"></script>
+
+<!-- <link
+  rel="stylesheet"
+  type="text/javascript"
+  href="{{ url_for('static', filename='js/syuppin.js') }}"
+/> -->
+
+
+
+  </head>
+
+  <header>
+    <h1>2nd Chance</h1>
+  </header>
+
+  <body>
+    <h2 class="member">出品</h2>
+
+
+    <form  method="POST"  action="/syuppin/" enctype="multipart/form-data">
+        <div class="flex1">
+          <div class="gazo-btn">
+              <label class="button1">
+                <input type="file" name="Pictures[]" id="form" accept=".jpg, .jpeg, .png, .gif" multiple required>
+                画像を<br>選択する
+              </label>
+              <p>最大5枚</p>
+          </div>
+          <div id="image-container"></div>
+        </div>
+
+      <div class="matome">
+        <div class="tate">
+
+
+
+          <select size="1" name="Cond_Goods" required>
+            <option value="">商品の状態</option>
+            <option value="新品・未使用">新品・未使用</option>
+            <option value="未使用に近い">未使用に近い</option>
+            <option value="目立った傷や汚れなし">目立った傷や汚れなし</option>
+            <option value="やや傷や汚れあり">やや傷や汚れあり</option>
+            <option value="全体的に状態が悪い">全体的に状態が悪い</option>
+          </select>
+
+          <select size="1" name="Genre_ID" required>
+            <option value="">カテゴリ</option>
+            {% for Genres in Genre %}
+                <option value="{{ Genres.Genre_ID }}">{{ Genres.Genre_Name }}</option>
+            {% endfor %}
+        </select>
+
+          <select size="1" name="Shipping_Method" required>
+            <option value="">発送の方法</option>
+            <option value="普通郵便">普通郵便</option>
+            <option value="ゆうパック">ゆうパック</option>
+            <option value="クロネコヤマト">クロネコヤマト</option>
+            <option value="ネコポス">ネコポス</option>
+            <option value="宅急便コンパクト">宅急便コンパクト</option>
+            <option value="宅急便">宅急便</option>
+          </select>
+
+          <select size="1" name="Shipping_Days" required>
+            <option value="">発送までの日数</option>
+            <option value="1日～2日">1日～2日</option>
+            <option value="2日～3日">2日～3日</option>
+            <option value="4日～7日">4日～7日</option>
+          </select>
+
+          <select size="1" name="Appraiser" required>
+            <option value="">鑑定の有無</option>
+            <option value="鑑定あり">鑑定あり</option>
+            <option value="鑑定なし">鑑定なし</option>
+          </select>
+        </div>
+
+        <div class="member01">
+          <h3 class="member">商品名<span>必須</span></h3>
+          <input
+            type="text"
+            class="bar"
+            maxlength="40"
+            value=""
+            name="Goods_Name"
+            placeholder="　例）商品名"
+            required
+          />
+          <h3 class="member">商品の価格<span>必須</span></h3>
+          <input
+            type="number"
+            class="bar"
+            min="100"
+            max="9999999"
+            value=""
+            name="Price"
+            placeholder="　例）￥１０００"
+            pattern="^[0-9]+$"
+            required
+          />
+          <h3 class="member">商品の説明<span>必須</span></h3>
+          <input
+            type="text"
+            class="bar1"
+            maxlength="100"
+            value=""
+            name="Explanation"
+            placeholder="　例）商品の説明"
+            required
+          />
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="member04">
+            <a class="member1" href="/top/">前へ戻る</a>
+          </div>
+
+          <div class="member03">
+            <input type="submit" class="member" value="出品"/>
+          </div>
+        </div>
+      </form>
+    <img class="member" src="{{ url_for('static', filename='images/seka.jpg') }}" />
+  </body>
+</html>

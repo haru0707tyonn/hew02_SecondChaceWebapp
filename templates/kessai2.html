@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2nd Chance</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/kessai2.css') }}" />
+</head>
+<body>
+    <header>
+        <h1>2nd Chance</h1>
+    </header>
+
+    <main>
+        <form method="POST" action="/kessai2/" id="kessai">
+        <h2 class="ue">ご注文内容の最終確認</h2>
+        <p class="border"></p>
+        
+        <div class="pon">
+            <div class="kuro">1</div>
+            <p class="sen"></p>
+            <div class="iro">2</div>
+            <p class="sen"></p>
+            <div class="kuro">3</div>
+        </div>
+
+        <div class="poko">
+            <p class="mozi1">お客様情報</p>
+            <p class="mozi2">ご注文内容確認</p>
+            <p class="mozi3">注文完了</p>
+        </div>
+          <div class="f1">
+              <div class="s1">
+                <img src="{{ url_for('static', filename='img/' + result[2]) }}">
+
+
+              </div>
+              <div class="s2">
+
+                  <h3>商品名：{{ result[1] }}</h3>
+                  <h3 class="kane">合計 : <span>￥{{ price }}</span></h3>
+
+                  {% if kessai_info %}
+                  <p class="bo"></p>
+                  <p class="siha">支払い方法:{{ kessai_info.Payment }}</p>
+                  <p class="bo"></p>
+              </div>
+          </div>
+      
+          <h2 class="sita">配送先</h2>
+          <p class="border"></p>
+      
+          <div class="last">
+              <p class="la1">名前：{{ kessai_info.Real_Name }}</p>
+              <p class="la2">住所：{{ kessai_info.Address }}</p>
+              <p class="la2">郵便番号：{{ kessai_info.Post_Code }}</p>
+              <p class="la2">電話番号：{{ kessai_info.Tel }}</p>
+          </div>
+          {% endif %}
+          <div class="ma"></div>
+          <div class="mi">
+            <a class="modo" href="/kessai1/">お客様情報に戻る</a>
+            <button type="submit" class="next">注文を確定する</button>
+        </div>
+
+
+      </form>
+
+
+    </main>
+
+    <footer id="footer">
+        <!-- ここにフッターの内容を追加 -->
+    </footer>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/kessai-common.js') }}"></script>
+</body>

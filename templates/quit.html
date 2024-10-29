@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>退会確認画面</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename = 'css/reset.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename = 'css/quit.css')}}" />
+  </head>
+
+  <body>
+ 
+      <header>
+
+        <h1>2nd Chance</h1>
+      
+      </header>
+
+      <main>
+        <div class="icon"><img src="{{ url_for('static' , filename = 'images/keikoku.jpg')}}" alt="icon"></div>
+        <h2 class="text1">退会の確認について</h2>
+        <p class="text2">会員を退会された場合には、現在ご利用中のアカウントが削除されてしまいます</p>
+        <form method="post"  class="" action="/quit/">
+        <button class="btn1" type="submit">退会する</button>
+        </form>
+        <a href="/mypage/">  <button class="btn2">戻る</button></a>
+      </main>
+
+      <footer id="footer">
+
+      </footer>
+    </div>
+  </body>
+
+</html>

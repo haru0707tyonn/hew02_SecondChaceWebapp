@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ユーザーメンテナンス</title>
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/user.css') }}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>2nd Chance</h1>
+    </header>
+
+    <main>
+      <h2>ユーザー管理</h2>
+
+      <div class="f1">
+        <div class="search-box">
+          <input type="text" placeholder="検索ワード" />
+          <button type="submit">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+
+        <div class="tag">
+          <a class="master03" href="/admin/"><< 管理画面TOPへ</a>
+        </div>
+      </div>
+
+      <table>
+
+        <table>
+            <tr>
+              <th>EMAIL</th>
+              <th>氏名</th>
+              <th>ユーザー名</th>
+              <th>アクション</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+              <td>{{record[0]}}</td>
+              <td>{{record[1]}}</td>
+              <td>{{record[2]}}</td>
+              <td>
+                <a class="sakujo" href="/sakujo/">アカウント削除</a>
+                <a class="huka" href="huka.html">利用不可</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+
+        
+    </main>
+  </body>
+
+  <footer class="master">
+    <p class="master">1ページ目</p>
+    <a class="master02" href="#">次へ</a>
+  </footer>
+</html>

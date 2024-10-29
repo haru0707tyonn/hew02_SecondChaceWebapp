@@ -1,0 +1,512 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+html { scroll-behavior: smooth;}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div.fle{
+  display: flex;
+  height: 13vh;
+  background-color: #333;
+}
+input.n{
+  width: 50vw;
+  height: 2.5vw;
+  margin-top: 2%;
+  margin-left: 6%;
+  margin-right: 6%;
+  border-radius: 5px;
+}
+div.ma{
+  text-align: center;
+}
+div.f30{
+  display: flex;
+  margin-top: 1%;
+  margin-left: 2%;
+}
+img.nav{
+  width: 3.5vw;
+  margin-right: 20px;
+}
+a.test2{
+  margin-top: 1.8%;
+  margin-left: 1%;
+  color: #fff;
+  font-size: 2.3vw;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: 'Rowdies', sans-serif;
+}
+a.test2:hover{
+  opacity: 0.5;
+}
+a.ho1:hover{
+  filter: invert(72%) sepia(26%) saturate(6428%) hue-rotate(1deg) brightness(105%) contrast(102%);
+}
+a.ho2:hover{
+  filter: invert(8%) sepia(99%) saturate(7044%) hue-rotate(247deg) brightness(100%) contrast(145%);
+}
+a.ho3:hover{
+  filter: sepia(100%) saturate(2929%);/* 黄色 */
+}
+a.modal-open-1:hover{
+  filter: invert(17%) sepia(91%) saturate(7085%) hue-rotate(128deg) brightness(100%) contrast(106%);
+}
+
+a.atag{
+  color: #fff;
+  font-size: 1.2vw;
+  text-decoration: none;
+}
+a.atag:hover{
+  opacity: 0.5;
+}
+
+p.pen{
+  margin-right: 20px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.65vw;
+}
+
+span{
+  margin: 0 8px;
+  color: #fff;
+}
+
+
+
+
+main {
+  /* background-color: rgb(143, 176, 240); */
+  margin: 30px auto 0 auto;
+  width: 1450px;
+  height: 2050px;
+}
+
+main .mainmain {
+  display: flex;
+  margin: 0 0 0 20px;
+}
+
+main .mainmain .left {
+  margin-top: 20px;
+  display: flex;
+}
+
+main .mainmain .left p {
+  text-align: center;
+  line-height: 50px;
+}
+
+main .mainmain .left .iine {
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 13px;
+  padding: 10px;
+  width: 72px;
+  height: 72px;
+  background-color: #ea4949;
+  margin-right: 10px;
+}
+
+.border{
+  position: relative;
+  width: 14.2vw;
+  height: 30vh;
+  margin: 0 auto;
+}
+
+img.main1{
+  object-fit: cover;
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+}
+
+
+main .mainmain .left .iine:hover {
+  opacity: 0.5;
+}
+
+main .mainmain .left .miru {
+  border-radius: 50px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 10px;
+  width: 72px;
+  height: 72px;
+  background-color: #ea4949;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+a.sisi{
+  text-decoration: none;
+}
+
+main .mainmain .left .miru:hover {
+  opacity: 0.5;
+}
+
+main .kate {
+  display: block;
+}
+
+.list {
+  margin-top: 20px;
+  display: block;
+  width: 165px;
+  border-radius: 3px;
+  color: #333;
+}
+
+.kategori {
+  padding-top: 20px;
+  width: 165px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.list li {
+  text-align: center;
+  margin: 17px 0 0 0;
+  list-style: none;
+  color: #222;
+  font-size: 15px;
+}
+
+.list a:hover {
+  opacity: 0.5;
+  color: #ea4949;
+}
+
+.list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.products {
+  margin-top: 20px;
+  width: 1280px;
+  height: 320px;
+}
+
+.products h2 {
+  font-size: 17px;
+  padding: 10px 0 10px 50px;
+}
+
+.products .div {
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto 0 auto;
+}
+
+.products .div ul {
+  width: 1200px;
+  display: flex;
+  cursor: pointer;
+}
+.products .div ul li {
+  margin: 0 10px;
+  list-style: none;
+}
+
+.products .div ul li p {
+  font-size: 0.9rem;
+  margin: 10px 0 0 0;
+}
+
+.products1 {
+  margin-top: 20px;
+  width: 1280px;
+  height: 320px;
+}
+
+.products1 h2 {
+  font-size: 17px;
+  padding: 10px 0 10px 50px;
+}
+
+.products1 .div {
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto 0 auto;
+}
+
+.products1 .div ul {
+  margin-top: 15px;
+  width: 1200px;
+  display: flex;
+  cursor: pointer;
+}
+.products1 .div ul li {
+  margin: 0 10px;
+  list-style: none;
+}
+
+.products1 .div ul li p {
+  font-size: 0.9rem;
+  margin: 10px 0 0 0;
+}
+
+
+
+
+
+#footer {
+  width: 100%;
+  margin-top: 29%;
+  padding: 20px 0 0 0;
+  text-align: center;
+  justify-content: center;
+  background-color: #333;
+}
+
+p.mini {
+  color: #fff;
+  font-size: 1vw;
+}
+
+h4.fo {
+  color: #fff;
+  font-size: 3.5vw;
+  font-family: 'Rowdies', sans-serif;
+}
+
+.p {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.p p {
+  margin: 30px;
+}
+
+.p1 {
+  padding-top: 8px;
+  font-size: 1.2vw;
+}
+
+.p2 {
+  padding-top: 8px;
+  font-size: 1.2vw;
+}
+
+.p3 {
+  padding: 10px 20px;
+  background-color: #555;
+  font-size: 1.2vw;
+  color: #fff;
+  z-index: 2;
+}
+
+.p3:hover {
+  opacity: 0.5;
+}
+
+.footer-b {
+  display: block;
+  margin: 0 auto 0 auto;
+  margin-bottom: 10px;
+  width: 90%;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.footer-p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-c {
+  display: block;
+  margin: 50px auto 0 auto;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.footer-d {
+  display: block;
+  margin: 27% auto 0 auto;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+/* .footer-p:hover{
+    opacity: 0.5;
+  } */
+
+.copy {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9vw;
+}
+
+
+/* .border{
+  margin-left: 285px;
+  margin-bottom: 50px;
+  width: 1650px;
+  border-top: 2px dashed; #555;
+} */
+
+.horizontal-items {
+  overflow: hidden;
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.horizontal-items::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-items li a:hover {
+  opacity: 0.5;
+}
+
+/*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown4 {
+  width: 1280px;
+  margin-top: px;
+  z-index: 1;
+  position: absolute;
+  animation: blinking 1s ease-in-out infinite alternate;
+  text-align: center;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown4 span {
+  /*テキストの形状*/
+  color: rgb(235, 63, 63);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*infoエリアをはじめは非表示*/
+#info1 {
+  display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container {
+  background-color: #fffffff6;
+  border-radius: 2%;
+  height: 400px;
+  max-width: 400px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+.modaru {
+  margin-top: 60px;
+}
+
+.syu,
+.riku {
+  border-radius: 1%;
+  padding-top: 22px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  width: 300px;
+  height: 70px;
+  font-size: 25px;
+  background-color: #333;
+  color: #fff;
+}
+
+.atagu {
+  text-decoration: none;
+}
+
+.atagu:hover {
+  opacity: 0.5;
+}
+
+.or {
+  margin: 25px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+#css-slider {
+  margin: 0 auto 0 auto;
+  width: 91vw;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slide-item {
+  width: 91vw;
+  height: 200px;
+  float: left;
+  position: relative;
+}
+
+.slider-wrapper {
+  width: 300%;
+  position: relative;
+  left: 0;
+  will-change: transform;
+  animation: slider 25s infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-1400px);
+  }
+  66% {
+    transform: translateX(-2800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+

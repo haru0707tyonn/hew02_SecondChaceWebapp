@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+/* 共通 */
+
+body {
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  background-color: #333333;
+}
+
+/* member画面 */
+
+h2 {
+  margin-top: 30px;
+  font-size: 2.3vw;
+  text-align: center;
+}
+
+.matome {
+  width: 900px;
+  display: flex;
+  margin: 0 auto 0 auto;
+  margin-bottom: -50px;
+}
+
+.button {
+  font-weight: 600;
+  color: #fff;
+  background-color: #333;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.tate {
+  display: flex;
+  flex-flow: column;
+  margin: 30px 0 0 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.tate select {
+  margin: 0 auto 30px auto;
+  width: 400px;
+  height: 40px;
+}
+.tate select option {
+  width: 400px;
+  height: 40px;
+}
+
+h3.member {
+  margin: 20px 0 6px 0;
+  font-size: 1.1vw;
+  text-align: left;
+}
+
+div.member01 {
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+div.member02 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+div.member03 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+span {
+  margin-left: 10px;
+  padding: 0 8px;
+  font-size: 0.8vw;
+  color: #fff;
+  background-color: #ff0000;
+  border-radius: 5px;
+}
+
+input.bar {
+  width: 100%;
+  height: 30px;
+  border: solid 1px #808080;
+  border-radius: 5px;
+}
+
+input.bar1 {
+  width: 100%;
+  height: 210px;
+  border: solid 1px #808080;
+  border-radius: 5px;
+}
+
+input.check {
+  transform: scale(3);
+}
+
+p.member {
+  margin-left: 30px;
+  font-size: 1.3vw;
+}
+
+a.member {
+  padding: 15px 120px;
+  font-size: 1.3vw;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  border: solid;
+  border-radius: 8px;
+}
+a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+img.member {
+  width: 15vw;
+  margin-top: -9%;
+  margin-left: 80%;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+th {
+  font-size: 1.3vw;
+  color: #fff;
+  background-color: #333333;
+}
+
+table,
+table tr,
+table th,
+table td {
+  text-align: center;
+  line-height: 40px;
+  border: solid 1px #ccc; /*グレーの枠線の指定*/
+  padding: 4px; /*セルの内側に上下左右に4px余白をあける*/
+  border-collapse: collapse;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+img.ka{
+    width: 10vw;
+}

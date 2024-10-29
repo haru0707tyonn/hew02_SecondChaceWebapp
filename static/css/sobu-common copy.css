@@ -1,0 +1,515 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+/* 共通 */
+
+body {
+  padding-top: 90px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  background-color: #333333;
+  font-family: 'Rowdies', sans-serif;
+}
+
+/* 共通 */
+
+/* login画面 */
+
+h2.login {
+  margin: 28px;
+  text-align: center;
+  font-size: 2.3vw;
+}
+
+h3.login {
+  margin: 5px;
+  margin-top: 20px;
+}
+
+div.login01 {
+  width: 35%;
+  margin: 0 auto;
+}
+
+div.login02 {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+}
+
+input.login {
+  width: 100%;
+  padding: 10px;
+}
+
+a.login {
+  padding: 15px 60px;
+  color: #fff;
+  font-size: 1.5vw;
+  text-decoration: none;
+  border: solid;
+  border-radius: 8px;
+  background-color: #000;
+}
+a.login:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+button.login {
+  padding: 15px 60px;
+  color: #fff;
+  font-size: 1.5vw;
+  text-decoration: none;
+  border: solid;
+  border-radius: 8px;
+  background-color: #000;
+}
+button.login:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+p.come {
+  margin: 30px;
+  font-size: 1.1vw;
+}
+
+p.border {
+  width: 30%;
+  margin: 20px;
+  margin-top: 50px;
+  margin-left: 35%;
+  border: solid 1px #000;
+}
+p.border1 {
+  width: 30%;
+  margin: 20px;
+  margin-top: 50px;
+  margin-left: 35%;
+  border: solid 1px #fff;
+}
+
+img.login {
+  width: 17vw;
+  margin-top: -10%;
+  margin-left: 70%;
+}
+
+/* login画面 */
+
+/* member画面 */
+
+h2 {
+  margin-top: 30px;
+  font-size: 2.3vw;
+  text-align: center;
+}
+
+h3.member {
+  margin: 20px 0 6px 0;
+  font-size: 1.1vw;
+  text-align: left;
+}
+
+div.member01 {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+div.member02 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+div.member03 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+span {
+  margin-left: 10px;
+  padding: 0 8px;
+  font-size: 0.8vw;
+  color: #fff;
+  background-color: #ff0000;
+  border-radius: 5px;
+}
+
+input.bar {
+  width: 100%;
+  height: 30px;
+  border: solid 1px #808080;
+  border-radius: 5px;
+}
+
+input.check {
+  transform: scale(3);
+}
+
+p.member {
+  margin-left: 30px;
+  font-size: 1.3vw;
+}
+
+a.member {
+  padding: 15px 120px;
+  font-size: 1.3vw;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  border: solid;
+  border-radius: 8px;
+}
+a.member:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+img.member {
+  width: 15vw;
+  margin-top: -10%;
+  margin-left: 70%;
+  margin-bottom: 30px;
+}
+
+/* member画面 */
+
+/* hello画面 */
+
+div.hello {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2.hello {
+  margin: 120px 0 70px 0;
+  text-align: center;
+  font-size: 3.3vw;
+}
+
+p.hello {
+  margin: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.8vw;
+}
+
+a.hello {
+  margin-top: 50px;
+  padding: 20px 80px;
+  color: #fff;
+  font-size: 1.5vw;
+  text-decoration: none;
+  border: solid;
+  border-radius: 8px;
+  background-color: #000;
+}
+a.hello:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+img.hello {
+  width: 17vw;
+  margin-top: -150px;
+  margin-left: 72%;
+}
+
+/* hello画面 */
+
+/* syuppinok画面 */
+
+div.syuppinok{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2.syuppinok{
+  font-size: 3vw;
+  margin: 80px 0 120px 0;
+}
+
+p.syuppinok{
+  margin-bottom: 150px;
+  line-height: 40px;
+  font-size: 1.5vw;
+}
+
+a.syuppinok{
+  padding: 25px 35px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.5vw;
+  text-decoration: none;
+  background-color: #333333;
+}
+a.syuppinok:hover{
+  border: solid;
+}
+
+/* syuppinok画面 */
+
+
+/* admin画面 */
+
+h2.admin {
+  margin: 70px 0 120px 0;
+  text-align: center;
+  font-size: 3.3vw;
+}
+
+div.admin {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+a.admin01 {
+  color: #fff;
+  padding: 20px 7%;
+  font-size: 1.5vw;
+  text-decoration: none;
+  border: solid;
+  border-radius: 8px;
+  background-color: #000;
+}
+a.admin01:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+a.admin02 {
+  color: #fff;
+  padding: 20px 10%;
+  font-size: 1.5vw;
+  text-decoration: none;
+  border: solid;
+  border-radius: 8px;
+  background-color: #000;
+}
+a.admin02:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+a.admin03 {
+  color: #fff;
+  padding: 20px 13%;
+  font-size: 1.5vw;
+  text-decoration: none;
+  border: solid;
+  border-radius: 8px;
+  background-color: #000;
+}
+a.admin03:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+img.admin {
+  width: 20vw;
+  margin-top: -20%;
+  margin-left: 70%;
+}
+
+/* admin画面 */
+
+/* master画面 */
+
+h2.master {
+  margin: 50px;
+  text-align: center;
+  font-size: 2.3vw;
+}
+
+a.master03 {
+  color: #000;
+  margin-left: 27.6%;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1vw;
+  border: solid 1px;
+  border-radius: 3px;
+}
+a.master03:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+table {
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+th {
+  font-size: 1.3vw;
+  color: #fff;
+  background-color: #333333;
+}
+
+table,
+table tr,
+table th,
+table td {
+  text-align: center;
+  line-height: 40px;
+  border: solid 1px #ccc; /*グレーの枠線の指定*/
+  padding: 4px; /*セルの内側に上下左右に4px余白をあける*/
+  border-collapse: collapse;
+}
+
+a.master01 {
+  padding: 5px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1vw;
+  border: solid 2px;
+  border-radius: 8px;
+  background-color: #333333;
+}
+a.master01:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+footer.master {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #555;
+}
+
+p.master {
+  margin: 0 50px 0 13%;
+  color: #fff;
+  font-size: 1.2vw;
+}
+
+a.master02 {
+  padding: 10px 35px;
+  color: #000;
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: #fff;
+}
+a.master02:hover {
+  background-color: aqua;
+}
+
+/* master画面 */
+
+/* fotter */
+
+#footer {
+  width: 100%;
+  padding: 20px 0 0 0;
+  text-align: center;
+  background-color: #333;
+}
+
+p.mini{
+  color: #fff;
+  font-size: 1vw;
+}
+
+h4{
+  color: #fff;
+  font-size: 3vw;
+}
+
+.p {
+  margin: 30px 0 30px 370px;
+  color: #fff;
+  display: flex;
+}
+
+.p p {
+  margin: 0 30px;
+}
+
+.p1 {
+  padding-top: 4.5px;
+  font-size: 1.3rem;
+}
+
+.p2 {
+  padding-top: 8px;
+  font-size: 1rem;
+}
+
+.p3 {
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  z-index: 2;
+}
+
+.p3:hover {
+  opacity: 0.5;
+}
+
+.footer-b {
+  display: block;
+  margin: 0 auto 0 auto;
+  margin-bottom: 10px;
+  width: 1400px;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.footer-p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-c {
+  display: block;
+  margin: 50px auto 0 auto;
+  width: 1200px;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+/* .footer-p:hover{
+  opacity: 0.5;
+} */
+
+.copy {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9vw;
+}
+/* fotter */

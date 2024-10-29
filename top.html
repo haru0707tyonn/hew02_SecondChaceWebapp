@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>トップページ</title>
+       
+   
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/top-common.css') }}"
+  />
+  
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+
+
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div>
+          <a href="top.html"><h1>2nd Chance</h1></a>
+
+          <nav>
+            <div class="header-nav">
+              <div class="login">
+                <p class="roguin">ログイン</p>
+                <p class="sura">/</p>
+                <p class="touroku">新規登録</p>
+              </div>
+
+              <input
+                type="text"
+                placeholder="商品を検索・・・"
+                class="search"
+              />
+              <div class="icon">
+                <div class="iconcon">
+                <a href="mypage.html"
+                  ><img
+                    src="{{ url_for('static', filename='images/hito.jpg') }}"
+                    alt="マイページ">
+                    <h2>マイページ</h2>
+                </a>
+                </div>
+                
+                <div class="iconcon">
+                  <a href="/osirase/">
+                  <img
+                    src="{{ url_for('static', filename='images/osirase.jpg') }}"
+                    alt="お知らせ">
+                    <h2>お知らせ</h2>
+                  </a>
+                </div>
+              
+                <div class="iconcon">
+                  <a href="kessai.html">
+                    <img
+                    src="{{ url_for('static', filename='images/siharai.jpg') }}"
+                    alt="支払い" class="sirase">
+                    <h2>支払い</h2>
+                  </a>
+                </div>
+           
+               <div class="iconcon">
+                <a href="#info1" class="modal-open-1">
+                  <img
+                  src="{{ url_for('static', filename='images/kamera.jpg') }}"
+                  alt="出品" class="syuppin">
+                  <h2>出品/リクエスト</h2>
+                </a>
+               </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+
+
+        <div id="css-slider">
+          <div class="slider-wrapper">
+            <div class="slide-item"><img src="{{ url_for('static', filename='images/slide0.jpg') }}" alt=""></div>
+            <div class="slide-item"><img src="{{ url_for('static', filename='images/slide1.jpg') }}" alt=""></div>
+            <div class="slide-item"><img src="{{ url_for('static', filename='images/slide2.jpg') }}" alt=""></div>
+          </div>
+        </div>
+
+        <section id="info1">
+          <div class="modaru">
+              <a href="/syuppin/" class="atagu"><p class="syu">出品</p></a>
+              <h2 class="or">or</h2>
+              <a href="/request/" class="atagu"><p class="riku">リクエスト</p></a>
+          </div>
+        </section>      
+
+
+        <div class="mainmain">
+          <div>
+            <div class="left">
+              <p class="iine">いいね</p>
+              <p class="miru">閲覧履歴</p>
+            </div>
+
+            <div>
+              <h2 class="kategori">カテゴリ一覧</h2>
+              <ul class="list">
+                <li><a href="kennsaku.html">ファッション</a></li>
+                <li><a href="kennsaku.html">家具・インテリア</a></li>
+                <li><a href="kennsaku.html">エレクトロニクス</a></li>
+                <li><a href="kennsaku.html">スポーツ・アウトドア</a></li>
+                <li><a href="kennsaku.html">本・音楽・ゲーム</a></li>
+                <li><a href="kennsaku.html">車・バイク</a></li>
+                <li><a href="kennsaku.html">おもちゃ・ホビー</a></li>
+                <li><a href="kennsaku.html">ペット用品</a></li>
+                <li><a href="kennsaku.html">ベビー・キッズ</a></li>
+                <li><a href="kennsaku.html">美容・健康</a></li>
+                <li><a href="kennsaku.html">地域情報</a></li>
+                <li><a href="kennsaku.html">ジュエリー・腕時計</a></li>
+                <li><a href="kennsaku.html">美容・コスメ</a></li>
+                <li><a href="kennsaku.html">スポーツ用品</a></li>
+                <li><a href="kennsaku.html">アウトドア用品</a></li>
+                <li><a href="kennsaku.html">音楽・楽器</a></li>
+                <li><a href="kennsaku.html">本・雑誌</a></li>
+                <li><a href="kennsaku.html">ゲーム・おもちゃ</a></li>
+                <li><a href="kennsaku.html">ペット用品・動物</a></li>
+                <li><a href="kennsaku.html">インテリア・家具</a></li>
+                <li><a href="kennsaku.html">自動車・バイク</a></li>
+                <li><a href="kennsaku.html">ホビー・コレクション</a></li>
+                <li><a href="kennsaku.html">ベビー用品</a></li>
+                <li><a href="kennsaku.html">マタニティ・産後用品</a></li>
+                <li><a href="kennsaku.html">健康・医療</a></li>
+                <li><a href="kennsaku.html">ダイエット・フィットネス</a></li>
+                <li><a href="kennsaku.html">ペット</a></li>
+                <li><a href="kennsaku.html">その他</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="products">
+              
+              <h2>新着商品</h2>
+              <div class="div">
+                <ul class="horizontal-items">
+                  {% for record in records %}
+                  <li>
+                    <a href="/syousai/">
+                      <div class="border">
+                        <img class="main1" src="{{ url_for('static', filename='images/buy2.jpg') }}" alt="kasa" />
+                      </div>
+                  </a>
+                    <p class="syo">商品名:{{record[0]}}</p>
+                    <p class="ne">値段:{{record[1]}}</p>
+                  </li>
+                  {% endfor %}
+              </div>
+              <div class="scrolldown4"><span>Scroll→</span></div>
+            </div>
+            <p class="footer-c"></p>
+
+<!-------------------------------------------------------------------------------------------------------------->
+
+            <div class="products">
+              <h2>おすすめ商品</h2>
+              <div class="div">
+                <ul class="horizontal-items">
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+              </ul>
+              </div>
+              <div class="scrolldown4"><span>Scroll→</span></div>
+            </div>
+            <p class="footer-c"></p>
+
+<!-------------------------------------------------------------------------------------------------------------->
+
+            <div class="products">
+              <h2>リクエスト商品</h2>
+              <div class="div">
+                <ul class="horizontal-items">
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+              </ul>
+                
+              </div>
+              <div class="scrolldown4"><span>Scroll→</span></div>
+            </div>
+            <p class="footer-c"></p>
+
+<!-------------------------------------------------------------------------------------------------------------->
+
+            <div class="products1">
+              <h2>人気商品</h2>
+              <div class="div">
+                <ul class="horizontal-items">
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                  <li>
+                    <a href="syousai.html">
+                    <img
+                      src="{{ url_for('static', filename='images/buy2.jpg') }}"
+                      alt="kasa"
+                      width="220px"
+                      height="220px"
+                    />
+                  </a>
+                    <p>商品名</p>
+                    <p>値段</p>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </main>
+
+      <footer id="footer">
+        <!-- <p class="border"></p> -->
+        <p class="footer-b"></p>
+        <p class="mini">セカンド チャンス</p>
+        <h4>2nd Chance</h4>
+        <div class="p">
+          <p class="p1">TEL 0000-00-0000</p>
+          <p class="p2">受付時間 平日 9:00〜21:00</p>
+          <p class="p3">お問い合わせフォーム</p>
+        </div>
+
+        <p class="footer-b"></p>
+        <p class="footer-p">利用規約・個人情報保護について</p>
+        <p class="footer-b"></p>
+
+        <p class="copy">
+          2023 &copy; Copyright 2nd Chance. All rights reserved.
+        </p>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/top-common.js') }}"></script>
+  </body>
+
+</html>

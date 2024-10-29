@@ -1,0 +1,1465 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div.f0{
+  padding: 15px 0 10px 0;
+  background-color: #333;
+}
+div.f1{
+  display: flex;
+  width: 100%;
+}
+div.f2{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 1%;
+}
+div.f3{
+  display: flex;
+  margin-right: 2%;
+}
+div.ma{
+  margin-top: -10%;
+  text-align: center;
+}
+input.na{
+  width: 70%;
+  height: 35px;
+  margin-top: -15px;
+  margin-left: 10%;
+  font-size: 1vw;
+  border: solid 1px #808080;
+  border-radius: 5px;
+}
+
+a.test1{
+  padding: 10px;
+  color: #fff;
+  font-size: 2.3vw;
+  font-weight: 900;
+  text-decoration: none;
+}
+a.atag{
+  color: #fff;
+  font-size: 1.2vw;
+  text-decoration: none;
+}
+
+img.nav{
+  width: 5vw;
+  margin-right: 20px;
+}
+
+p.pen{
+  margin-right: 20px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.65vw;
+}
+
+span.nav{
+  margin: 0 8px;
+  color: #fff;
+}
+
+main {
+  margin: 0 auto 0 auto;
+  width: 1450px;
+  height: 100%;
+}
+
+/* オリジナル*/
+div.flex {
+  display: flex;
+  padding: 50px 0 0 0;
+  margin: 0 0 10px 0;
+}
+.pic {
+  width: 467px;
+  height: 467px;
+  margin: 0 0 0 225px;
+}
+div.mono {
+  margin-top: 20px;
+  margin-left: 60px;
+}
+div.mono h1 {
+  margin: -20px 0 0 0;
+  font-size: 1.7rem;
+}
+.money {
+  margin: 10px 0 10px 0;
+  font-size: 1.3rem;
+}
+div.iineandkome {
+  display: flex;
+  margin: 40px 0 0 0;
+}
+div.iine a {
+  padding: 15px 20px;
+  margin: 0 50px 0 0;
+  border-radius: 10px;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: yellow;
+}
+div.kome a {
+  padding: 15px 20px;
+  margin: 0 50px 0 0;
+  border-radius: 10px;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: green;
+}
+div.buy {
+  margin: 60px 0 0 0;
+}
+div.buy a {
+  padding: 15px 160px;
+  margin: 0 80px 0 0px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: red;
+}
+
+div.request {
+  margin: 60px 0 0 0;
+}
+div.request a {
+  padding: 15px 50px;
+  margin: 0 80px 0 0px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: #ea4949;
+}
+
+div.request a:hover {
+  opacity: 0.5;
+}
+
+.syosai {
+  display: flex;
+}
+hr.main {
+  margin: 10px 0 10px 0;
+}
+.category {
+  display: flex;
+  margin: 20px 0 20px 0;
+}
+.category h3 {
+  margin: 0 50px 0 0;
+  width: 150px;
+  font-size: 1.1rem;
+}
+.category ul {
+  margin: 0 0 0 50px;
+}
+.category ul li {
+  margin: 5px 0 0 -50px;
+  list-style: none;
+}
+.category .list li a {
+  color: blue;
+}
+.sonota {
+  display: flex;
+  margin: 10px 0 0 0;
+}
+.sonotatitle {
+  margin: 0 50px 0 0;
+  width: 150px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.sonotasyosai {
+  font-size: 1rem;
+}
+.user2 {
+  display: flex;
+  margin: 10px 0 0 0;
+}
+.user2 .namename {
+  margin: 10px 0 10px 10px;
+  font-size: 1.3rem;
+}
+.user2 p {
+  margin: auto 0 auto 10px;
+}
+.user2 .hyoka {
+  display: flex;
+}
+.picpic {
+  display: flex;
+  margin: 10px 0 0 225px;
+}
+.picpicpic {
+  margin: 0 10px 0 0;
+}
+.picpicpic img {
+  height: 58px;
+  width: 58px;
+}
+div.ue {
+}
+div.ue h2 {
+  font-size: 1.2rem;
+  margin: 45px 0 0 0;
+}
+div.sita {
+  display: flex;
+}
+div.sita h2 {
+  font-size: 1.2rem;
+  margin: 30px 0 0 225px;
+}
+div.sita .comekazu {
+  margin: 30px 0 0 0;
+  font-size: 1.2rem;
+}
+div.honbun {
+  width: 1000px;
+  margin: 0 auto 0 auto;
+  font-size: 1rem;
+  line-height: 30px;
+}
+.user {
+  display: flex;
+  margin: 0 0 0 225px;
+}
+.user p {
+  margin: auto 0 auto 10px;
+}
+div.comedasihonbun {
+  width: 1000px;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: pink;
+  line-height: 20px;
+}
+div.comesyupinhonbun {
+  width: 1000px;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: blue;
+  line-height: 20px;
+}
+div.comesonotahitohonbun {
+  width: 1000px;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #333;
+  line-height: 20px;
+}
+div.comebutton {
+  margin: 50px 0 30px 470px;
+}
+div.comebutton a {
+  padding: 10px 160px;
+  margin: 0 80px 0 0px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: #333;
+}
+
+div.comebutton a:hover {
+  opacity: 0.5;
+}
+.osusume {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 0 225px;
+}
+.osusumepic {
+  width: 17%;
+}
+.osusumepic img {
+  margin: 0 15px 0 0;
+  height: 187px;
+  width: 187px;
+}
+.osusumepic a {
+  text-decoration: none;
+  color: black;
+}
+.osusumepic p {
+  margin: 5px 0 15px 0;
+  font-size: 0.8rem;
+  line-height: 17px;
+}
+
+div.sbutton {
+  margin: 60px 0 0 0;
+}
+div.sbutton a {
+  padding: 15px 150px;
+  margin: 0 0 0 420px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: blue;
+}
+
+
+/*                      */
+.box-1 {
+  background: skyblue;
+}
+
+.box-2 {
+  background: tomato;
+}
+
+.box-3 {
+  background: limegreen;
+}
+
+.box-4 {
+  background: pink;
+}
+
+.hidden {
+  display: none;
+}
+.flex {
+  margin: 0 auto 0 auto;
+  width: 1480px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.box {
+  height: 100%;
+  min-width: 100%;
+}
+
+.box-1 {
+  background: skyblue;
+}
+
+.box-2 {
+  background: tomato;
+}
+
+.box-3 {
+  background: limegreen;
+}
+
+.box-4 {
+  background: pink;
+}
+
+#lt,
+#gt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 24px;
+  padding: 0 6px;
+  cursor: pointer;
+}
+
+#lt {
+  top: 300px;
+  left: 227px;
+}
+
+#gt {
+  top: 300px;
+  right: 760px;
+}
+
+#lt:hover,
+#gt:hover {
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
+
+/*  mypage  */
+.migi {
+  padding-left: 10px;
+  width: 1300px;
+}
+
+.gazoflex {
+  display: flex;
+  box-sizing: border-box;
+  width: 1300px;
+  height: 200px;
+}
+
+.gazoflex div .iconcon {
+  border-radius: 100%;
+  border: 2px solid black;
+  width: 150px;
+  height: 150px;
+}
+.myuser {
+  font-size: 2rem;
+  margin: 30px 0 0 30px;
+  width: 450px;
+}
+.b {
+  margin: 0px 0 0 350px;
+}
+
+.b h2 {
+  font-size: 1.5rem;
+}
+#header {
+  box-sizing: border-box;
+  background: #ccc;
+  height: 50px;
+}
+#sub {
+  box-sizing: border-box;
+  height: 100%;
+  width: 220px;
+  /* position: fixed; */
+  overflow: auto;
+  /* background: #eee; */
+  padding: 5px;
+  margin-top: -40px;
+  border-right: solid 1px; /* 横線 */
+}
+
+#sub h2 {
+  font-size: 1.2rem;
+  margin: 30px 0 0 0;
+}
+
+#sub ul a {
+  text-decoration: none;
+  color: #333;
+}
+#sub ul a:hover {
+  opacity: 0.5;
+}
+
+#sub ul li {
+  list-style: none;
+  margin: 10px 0 0 0;
+}
+
+
+.rankandkeep {
+  display: flex;
+  margin: 0px 0 0 220px;
+  text-align: center;
+  background-color: #dddddd;
+}
+.rankandkeep h4 {
+  margin: 30px 0 10px 0;
+  font-size: 1.3rem;
+}
+.rankup {
+  margin: 0 120px 0 260px;
+}
+.tugimade img {
+  position: relative;
+}
+.tugimade h2 {
+  position: absolute;
+  text-align: center;
+  width: 230px;
+  bottom: 100px;
+  right: 859px;
+  font-size: 1.5rem;
+}
+.tugimade h3 {
+  position: absolute;
+  text-align: center;
+  width: 230px;
+  bottom: 70px;
+  right: 859px;
+  font-size: 1.8rem;
+}
+.kip h2 {
+  /* position: absolute; */
+  text-align: center;
+  width: 230px;
+  /* bottom: 100px;
+  right: 509px; */
+  font-size: 1.5rem;
+}
+.kip h3 {
+  /* position: absolute; */
+  text-align: center;
+  width: 230px;
+  /* bottom: 70px;
+  right: 509px; */
+  font-size: 1.8rem;
+}
+
+h4.ookini {
+  margin: 50px 0 0 230px;
+  font-size: 1.3rem;
+}
+.ookini {
+  width: 1250px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0 0 230px;
+}
+.osusume {
+  display: flex;
+  flex-wrap: wrap;
+}
+.onikipic {
+  width: 180px;
+  width: 16%;
+}
+.onikipic img {
+  height: 180px;
+  width: 180px;
+}
+.onikipic a {
+  text-decoration: none;
+  color: black;
+}
+.onikipic p {
+  margin: 5px 0 10px 0;
+  font-size: 0.8rem;
+  line-height: 17px;
+}
+
+/*  usermaintenance  */
+table#maintenanceTD {
+  width: 1450px;
+  margin: 0 auto o auto;
+  border: none;
+  border-spacing: 3px;
+  text-align: left;
+}
+table#maintenanceTD th {
+  padding: 10px;
+  border: solid 3px black;
+  background-color: #ddd;
+  width: 25%;
+}
+table#maintenanceTD td {
+  padding: 10px;
+  border: solid 1px black;
+  /*  background-color: #ddd;*/
+  width: 25%;
+}
+.searchh {
+  margin: 30px 0 0 0;
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #767d83;
+  border-radius: 10px;
+}
+
+.searchh input {
+  width: 750px;
+  height: 45px;
+  padding: 5px 15px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+}
+
+.searchh -input::placeholder {
+  color: #767d83;
+}
+
+.searchh button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.searchh button::after {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%23767d83%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  content: "";
+}
+div.userbotton {
+  display: flex;
+}
+div.s a {
+  margin: 0 15px 0 20px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+div.c a {
+  margin: 0 15px 0 0;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+div.e a {
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+
+/*  tablemaintenance  */
+.tablename {
+  margin: 30px 0 0 0;
+  padding: 20px 20px;
+  width: 700px;
+  font-size: 2rem;
+  background-color: aqua;
+}
+
+.headersita {
+  display: flex;
+}
+.sitabotton {
+  display: flex;
+  margin: 40px 0 0 70px;
+}
+div.tuika a {
+  padding: 15px 30px;
+  margin: 0 50px 0 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-decoration: none;
+  background-color: blue;
+}
+div.tablebotton {
+  display: flex;
+  width: 160px;
+}
+div.tablek a {
+  margin: 0 15px 0 20px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+div.tables a {
+  margin: 0 15px 0 0;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+
+.Pagination {
+  display: flex;
+  margin: 30px 0 0 0;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+}
+.Pagination-Item-Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  font-size: 20px;
+  color: #4169e1;
+  font-weight: bold;
+  transition: all 0.15s linear;
+  text-decoration: none;
+}
+.Pagination-Item-Link-Icon {
+  width: 20px;
+}
+.Pagination-Item-Link.isActive {
+  pointer-events: none;
+  color: #111;
+}
+.Pagination-Item-Link:not(.isActive):hover {
+  opacity: 0.5;
+}
+.scroll {
+  margin-inline: auto;
+  margin-top: 50px;
+  overflow-x: auto; /* tableタグのはみ出た要素を隠す */
+  white-space: nowrap; /* テキストの折り返しなし */
+  width: 1450px;
+}
+table#tablemaintenanceTD {
+  margin: 0 auto o auto;
+  border: none;
+  width: 2000px; /* tableタグの親要素より広く */
+  text-align: left;
+}
+table#tablemaintenanceTD th {
+  padding: 10px;
+  border: solid 3px black;
+  background-color: #ddd;
+  width: 17%;
+}
+table#tablemaintenanceTD td {
+  padding: 10px;
+  border: solid 1px black;
+  /*  background-color: #ddd;*/
+}
+
+/* 出品・リクエストーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+/*infoエリアをはじめは非表示*/
+#info1 {
+  display: none;
+  padding-top: 60px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaru.modaal-close:after,
+.modaru.modaal-close:before {
+  background: #ccc;
+}
+
+.modaru.modaal-close:focus:after,
+.modaru.modaal-close:focus:before,
+.modaru.modaal-close:hover:after,
+.modaru.modaal-close:hover:before {
+  background: #666;
+}
+
+.syu,
+.riku {
+  border-radius: 1%;
+  padding-top: 22px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  width: 300px;
+  height: 70px;
+  font-size: 25px;
+  background-color: #333;
+  color: #fff;
+}
+
+.atagu {
+  text-decoration: none;
+}
+
+.atagu:hover {
+  opacity: 0.5;
+}
+
+.or {
+  margin: 25px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* プロフィール------------------------------------------------------------------------ */
+
+/*infoエリアをはじめは非表示*/
+#info2 {
+  display: none;
+}
+
+/* 角を丸く */
+.modaal-container{
+  border-radius: 5%;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+.modaru {
+  margin-top: 60px;
+}
+
+.pro1 {
+  display: flex;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+h4 {
+  margin-left: 10%;
+  margin-bottom: 10px;
+  font-size: 1.4vw;
+}
+
+.profile-icon {
+  border: solid 1px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+p.pu{
+  margin-top: 10px;
+  margin-left: 10%;
+  font-size: 1.1vw;
+}
+input.in1 {
+  width: 80%;
+  height: 35px;
+  margin-left: 10%;
+  border: solid 1px #808080;
+  border-radius: 5px;
+}
+div.f12{
+  margin-left: 10%;
+}
+h3.member {
+  margin-left: 10%;
+  margin: 25px 0 6px 0;
+  font-size: 1vw;
+  text-align: left;
+}
+
+span.aka {
+  margin-left: 10px;
+  padding: 0 8px;
+  font-size: 0.8vw;
+  color: #fff;
+  background-color: #ff0000;
+  border-radius: 5px;
+}
+
+p.bar{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px;
+}
+
+a.kaeru {
+  margin-top: 10%;
+  margin-left: 20%;
+  height: 20%;
+  padding: 3% 5%;
+  border-radius: 5%;
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+}
+
+div.f13{
+  margin-top: 10%;
+  text-align: center;
+}
+a.ru {
+  padding: 2% 6%;
+  border-radius: 5%;
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+}
+a:hover{
+  opacity: 0.5;
+}
+
+.syu,
+.riku {
+  border-radius: 1%;
+  padding-top: 22px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  width: 300px;
+  height: 70px;
+  font-size: 25px;
+  background-color: #333;
+  color: #fff;
+}
+
+.atagu {
+  text-decoration: none;
+}
+
+.atagu:hover {
+  opacity: 0.5;
+}
+
+.or {
+  margin: 25px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* 本人情報------------------------------------------------------------------------ */
+
+/*infoエリアをはじめは非表示*/
+#info3 {
+  display: none;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+
+h3.member {
+  margin: 20px 0 6px 0;
+  font-size: 1.1vw;
+  text-align: left;
+}
+
+div.member01 {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+div.member02 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+div.member03 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+span.aka {
+  margin-left: 10px;
+  padding: 0 8px;
+  font-size: 0.8vw;
+  color: #fff;
+  background-color: #ff0000;
+  border-radius: 5px;
+}
+
+input.bar {
+  width: 90%;
+  height: 30px;
+  border: solid 1px #808080;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input.check {
+  transform: scale(3);
+}
+
+p.member {
+  margin-left: 30px;
+  font-size: 1.3vw;
+}
+
+a.member {
+  padding: 15px 120px;
+  font-size: 1.3vw;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  border: solid;
+  border-radius: 8px;
+}
+
+div.f14{
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+h3.text06{
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+p.text05{
+  margin-top: 10px;
+  font-size: 1.1vw;
+}
+
+
+/* 住所------------------------------------------------------------------------ */
+
+/*infoエリアをはじめは非表示*/
+#info4 {
+  display: none;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+div.f15{
+  margin-left: 10%;
+}
+p.come{
+  font-size: 1.1vw;
+  margin-top: 15px;
+}
+select.se1{
+  margin-top: 15px;
+  padding: 4px 8px;
+}
+input.bar01 {
+  width: 20%;
+  height: 23px;
+  border: solid 1px #808080;
+  border-radius: 5px;
+}
+input.bar03 {
+  width: 90%;
+  margin-top: 15px;
+  height: 25px;
+  border: solid 1px #808080;
+  border-radius: 5px;
+}
+h3.text07{
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+/* 電話番号------------------------------------------------------------------------ */
+
+/*infoエリアをはじめは非表示*/
+#info5 {
+  display: none;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+div.ma{
+  text-align: center;
+}
+p.tele{
+  margin-top: 25px;
+  font-size: 1.8vw;
+}
+input.bar04 {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 15px;
+  height: 35px;
+  font-size: 1.4vw;
+  border: solid 1px #808080;
+  border-radius: 5px;
+}
+
+/* 支払方法------------------------------------------------------------------------ */
+
+/*infoエリアをはじめは非表示*/
+#info6 {
+  display: none;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+p.kure{
+  margin-top: 5px;
+  margin-left: 10%;
+  font-weight: 900;
+  font-size: 1.1vw;
+}
+p.ku{
+  margin: 5% 0 3% 10%;
+}
+
+img.kureka{
+  width: 20vw;
+  margin-left: 10%;
+}
+h3.text07{
+  margin-left: 10%;
+}
+
+input.bar05 {
+  width: 80%;
+  height: 30px;
+  margin-left: 10%;
+  border: solid 1px #808080;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+input.bar5 {
+  width: 40%;
+  height: 30px;
+  margin-left: 10%;
+  border: solid 1px #808080;
+  border-radius: 5px;
+  margin-bottom: 4px;
+}
+select.se2{
+  margin-left: 10%;
+  padding: 4px 10px;
+}
+
+/* 通知方法------------------------------------------------------------------------ */
+
+/*infoエリアをはじめは非表示*/
+#info7 {
+  display: none;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+div.f18{
+  display: flex;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+p.text08{
+  margin-top: 15px;
+  margin-right: 34.2%;
+  font-size: 1.3vw;
+  font-weight: 900;
+}
+p.text09{
+  margin-top: 15px;
+  margin-right: 22%;
+  font-size: 1.3vw;
+  font-weight: 900;
+}
+p.text10{
+  margin-top: 15px;
+  margin-right: 18%;
+  font-size: 1.3vw;
+  font-weight: 900;
+}
+
+/* on/off */
+.toggle-button-004 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  box-sizing: content-box;
+  background-color: #50494933;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.toggle-button-004:has(:checked) {
+  background-color: #0a68ff33;
+}
+
+.toggle-button-004::before {
+  position: absolute;
+  left: 5px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #504949;
+  content: '';
+  transition: left .4s;
+}
+
+.toggle-button-004:has(:checked)::before {
+  left: 50px;
+  background-color: #0a68ff;
+}
+
+.toggle-button-004::after {
+  position: absolute;
+  left: 26px;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 600;
+  font-size: .9em;
+  content: 'off';
+  transition: left .4s;
+}
+
+.toggle-button-004:has(:checked)::after {
+  left: 71px;
+  content: 'on';
+}
+
+.toggle-button-004 input {
+  display: none;
+}
+
+/* リクエスト機能について------------------------------------------------------------------------ */
+
+/*infoエリアをはじめは非表示*/
+#info8 {
+  display: none;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+/*infoエリアをはじめは非表示*/
+#info8 {
+  display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaru2 .modaal-container {
+  background-color: #fffffff6;
+  border-radius: 2%;
+  height: 400px;
+  max-width: 400px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+p.text08-2{
+  margin-left: 8%;
+  font-size: 1.7vw;
+  line-height: 40px;
+}
+p.text09-2{
+  font-size: 1.7vw;
+  line-height: 40px;
+}
+p.text09-3{
+  margin-top: 20px;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+/* 鑑定機能について------------------------------------------------------------------------ */
+
+/*infoエリアをはじめは非表示*/
+#info9 {
+  display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaru2 .modaal-container {
+  background-color: #fffffff6;
+  border-radius: 2%;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ffffff;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+.solid09 {
+  border: solid 1px #111;
+}
+
+
+#footer {
+  width: 100%;
+  padding: 20px 0 0 0;
+  text-align: center;
+  justify-content: center;
+  background-color: #333;
+}
+
+p.mini {
+  color: #fff;
+  font-size: 1vw;
+}
+
+h5.fo {
+  color: #fff;
+  font-size: 3vw;
+}
+
+.p {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.p p {
+  margin: 30px;
+}
+
+.p1 {
+  padding-top: 8px;
+  font-size: 1.2vw;
+}
+
+.p2 {
+  padding-top: 8px;
+  font-size: 1.2vw;
+}
+
+.p3 {
+  padding: 10px 20px;
+  background-color: #555;
+  font-size: 1.2vw;
+  color: #fff;
+  z-index: 2;
+}
+
+.p3:hover {
+  opacity: 0.5;
+}
+
+.footer-b {
+  display: block;
+  margin: 0 auto 0 auto;
+  margin-bottom: 10px;
+  width: 1400px;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.footer-p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-c {
+  display: block;
+  margin: 50px auto 0 auto;
+  width: 1200px;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+/* .footer-p:hover{
+    opacity: 0.5;
+  } */
+
+.copy {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9vw;
+}

@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+html { scroll-behavior: smooth;}
+
+body{
+  background-color: #eee;
+}
+
+
+/*共通のスタイル*/
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+div.fle{
+  display: flex;
+  height: 13vh;
+  background-color: #333;
+}
+
+form{
+  background-color: #fff;
+}
+
+.search_container{
+  box-sizing: border-box;
+  position: relative;
+  width: 45%;
+  margin-right: 2%;
+  margin-left: 10%;
+  top: 30%;
+  border: 1px solid #999;
+  padding: 0 10px;
+  border-radius: 20px;
+  height: 5vh;
+  overflow: hidden;
+}
+.search_container input[type="text"]{
+  border: none;
+  height: 100%;
+  font-size: 1vw;
+}
+.search_container input[type="text"]:focus {
+  outline: 0;
+}
+.search_container input[type="submit"]{
+  cursor: pointer;
+  font-family: FontAwesome;
+  font-size: 1.3em;
+  border: none;
+  background: none;
+  color: #3879D9;
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  right: 0;
+  top: -10px;
+  outline : none;
+}
+
+div.ma{
+  margin-right: 10px;
+  text-align: center;
+  font-size: 1vw;
+}
+p.pp{
+  margin-left: -25%;
+  color: #fff;
+  font-size: 0.8vw;
+  font-weight: 900;
+}
+p.ppp{
+  color: #fff;
+  font-size: 0.8vw;
+  margin-left: -17%;
+  font-weight: 900;
+}
+div.f30{
+  display: flex;
+  margin-top: 1%;
+  margin-left: 2%;
+}
+img.nav{
+  width: 3.5vw;
+  margin-right: 20px;
+}
+a.test2{
+  margin-top: 1.5%;
+  margin-left: 3.5%;
+  padding-bottom: -10%;
+}
+a.test2:hover{
+  opacity: 0.5;
+}
+img.nd{
+  width: 13svw;
+
+}
+a.ho1:hover{
+  filter: invert(72%) sepia(26%) saturate(6428%) hue-rotate(1deg) brightness(105%) contrast(102%);
+}
+a.ho2:hover{
+  filter: invert(8%) sepia(99%) saturate(7044%) hue-rotate(247deg) brightness(100%) contrast(145%);
+}
+a.ho3:hover{
+  filter: sepia(100%) saturate(2929%);/* 黄色 */
+}
+a.modal-open-1:hover{
+  filter: invert(17%) sepia(91%) saturate(7085%) hue-rotate(128deg) brightness(100%) contrast(106%);
+}
+
+a.atag{
+  color: #fff;
+  font-size: 1.2vw;
+  text-decoration: none;
+}
+a.atag:hover{
+  opacity: 0.5;
+}
+
+p.pen{
+  margin-right: 20px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.65vw;
+}
+
+span{
+  margin: 0 8px;
+  color: #fff;
+}
+
+
+
+
+
+div.main{
+  margin: 0 auto;
+  width: 60%;
+}
+
+h2.m{
+  margin: 5% 0;
+  text-align: center;
+  font-size: 2vw;
+}
+
+div.come{
+  margin-bottom: 2%;
+  padding: 1.5%;
+  border-radius: 5px;
+  background-color: #fff;
+}
+span.me1{
+  padding: 0 2%;
+  border-radius: 3px;
+  color: #fff;background-color: #191970;
+}
+p.come1{
+  font-size: 0.9vw;
+}
+p.come2{
+  margin-top: 2%;
+  font-size: 1.2vw;
+}
+
+
+div.img{
+  position: fixed;
+  right: 2%;
+  bottom: 1%;
+}
+img{
+  width: 15vw;
+}
+
+
+
+/*infoエリアをはじめは非表示*/
+#info1 {
+  display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container {
+  background-color: #fffffff6;
+  border-radius: 2%;
+  height: 400px;
+  max-width: 400px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+.modaru {
+  margin-top: 60px;
+}
+
+.syu,
+.riku {
+  border-radius: 1%;
+  padding-top: 22px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  width: 300px;
+  height: 70px;
+  font-size: 25px;
+  background-color: #333;
+  color: #fff;
+}
+
+.atagu {
+  text-decoration: none;
+}
+
+.atagu:hover {
+  opacity: 0.5;
+}
+
+.or {
+  margin: 25px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+#css-slider {
+  margin: 0 auto 0 auto;
+  width: 1400px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slide-item {
+  width: 1400px;
+  height: 200px;
+  float: left;
+  position: relative;
+}
+
+.slider-wrapper {
+  width: 300%;
+  position: relative;
+  left: 0;
+  will-change: transform;
+  animation: slider 25s infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-1400px);
+  }
+  66% {
+    transform: translateX(-2800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

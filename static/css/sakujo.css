@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/*共通のスタイル*/
+
+/* 共通 */
+
+
+body {
+  padding-top: 90px;
+  }
+  
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  background-color: #333333;
+  font-family: 'Rowdies', sans-serif;
+}
+
+
+
+h2{
+  margin: 2% 0 4% 0;
+  font-size: 2vw;
+  text-align: center;
+}
+
+div.f1{
+  display: flex;
+}
+
+div.tag{
+  margin-top: 10px;
+  margin-left: 19.5%;
+}
+
+a.master03 {
+  margin-left: 74.5%;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 1vw;
+  border: solid 1px;
+  border-radius: 3px;
+}
+a.master03:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+
+table {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+th {
+  font-size: 1.3vw;
+  color: #fff;
+  background-color: #333333;
+}
+
+table,
+table tr,
+table th,
+table td {
+  font-size: 1.1vw;
+  line-height: 40px;
+  border: solid 1px #ccc; /*グレーの枠線の指定*/
+  padding: 4px; /*セルの内側に上下左右に4px余白をあける*/
+  border-collapse: collapse;
+}
+
+td.t1{
+  width: 30%;
+}
+td.t2{
+  width: 15;
+}
+td.t3{
+  width: 25%;
+}
+td.t4{
+  width: 25%;
+}
+
+
+a.sakujo{
+  margin-left: 17%;
+  padding: 1.5% 15%;
+  font-size: 0.9vw;
+  color: #fff;
+  text-decoration: none;
+  background-color: #333333;
+}
+
+
+
+
+
+footer.master {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #555;
+}
+
+p.master {
+  margin: 0 50px 0 13%;
+  color: #fff;
+  font-size: 1.2vw;
+}
+
+a.master02 {
+  padding: 10px 35px;
+  color: #000;
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: #fff;
+}
+a.master02:hover {
+  background-color: aqua;
+}
